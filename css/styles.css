@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
 
 h1 {
   font-family: "Lato";
@@ -83,6 +84,73 @@ h4 {
     border-bottom: 2px solid #148e76;
     background-color: #17a78b;
     transition: 0.25s linear; }
+
+.scroll-up {
+  height: 40px;
+  width: 40px;
+  background: url(../img/background/icon_up_footer.png) no-repeat #3c5065;
+  background-size: 16px 9px;
+  background-position: center;
+  border-radius: 3px;
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  opacity: 0.7;
+  display: none; }
+  .scroll-up:hover {
+    opacity: 1;
+    background-color: #506a85;
+    transition: 0.5s linear; }
+
+.contact-us-modal {
+  background-color: #ffffff75; }
+  .contact-us-modal_wrapper {
+    max-width: 970px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 30px 40px 50px 40px;
+    box-shadow: 0 7px 40px rgba(0, 0, 0, 0.5); }
+    .contact-us-modal_wrapper > div {
+      border: none; }
+      .contact-us-modal_wrapper > div > div {
+        border: none; }
+  .contact-us-modal__button {
+    margin-top: 40px;
+    width: 295px; }
+  .contact-us-modal .modal-header-block {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 26px;
+    position: relative; }
+    .contact-us-modal .modal-header-block__close {
+      height: 25px;
+      width: 25px;
+      background-image: url(../img/button_close.png);
+      background-position: center;
+      background-size: 25px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 15px;
+      right: 10px; }
+  .contact-us-modal .modal-input-block textarea, .contact-us-modal .modal-input-block input {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid #dddddd !important;
+    box-shadow: none;
+    background-color: #f8fafd;
+    color: #757575;
+    padding: 12px 18px;
+    line-height: 22px;
+    display: block; }
+  .contact-us-modal .modal-input-block__name, .contact-us-modal .modal-input-block__email {
+    width: calc((100% - 30px) / 2);
+    height: 48px;
+    margin-bottom: 24px; }
+  .contact-us-modal .modal-input-block__message {
+    height: 135px;
+    vertical-align: top; }
 
 .contact-info__item {
   font-family: "Source Sans Pro";
@@ -341,6 +409,9 @@ h4 {
       background-image: url("../img/background/info_column/icon_marketing.png");
       background-position: center;
       background-repeat: no-repeat; }
+    .advantages-info_items_add {
+      display: none;
+      opacity: 0; }
     .advantages-info_items .item__logo {
       height: 70px;
       width: 70px; }

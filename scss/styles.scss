@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 h1 {
@@ -98,6 +99,95 @@ h4 {
         transition: 0.25s linear;
     }
 
+}
+
+.scroll-up {
+    @include square(40px);
+    background: url(../img/background/icon_up_footer.png) no-repeat #3c5065;
+    background-size: 16px 9px;
+    background-position: center;
+    border-radius: 3px;
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    opacity: 0.7;
+    display: none;
+
+    &:hover {
+        opacity: 1;
+        background-color: #506a85;
+        transition: 0.5s linear;
+    }
+}
+
+.contact-us-modal {
+    background-color: #ffffff75;
+
+    &_wrapper {
+        max-width: 970px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 30px 40px 50px 40px;
+        box-shadow: 0 7px 40px rgba(0, 0, 0, 0.5);
+
+        > div {
+            border: none;
+
+            > div {
+                border: none;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+        width: 295px;
+    }
+
+    .modal-header-block {
+        border: none;
+        padding-top: 0;
+        padding-bottom: 26px;
+        position: relative;
+
+        &__close {
+            @include square(25px);
+
+            background-image: url(../img/button_close.png);
+            background-position: center;
+            background-size: 25px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+    }
+
+    .modal-input-block {
+        textarea, input {
+            @include font-style(400, 16px, "Source Sans Pro");
+
+            border-radius: 5px;
+            border: 1px solid #dddddd !important;
+            box-shadow: none;
+            background-color: #f8fafd;
+            color: #757575;
+            padding: 12px 18px;
+            line-height: 22px;
+            display: block;
+        }
+
+        &__name, &__email {
+            width: calc((100% - 30px) / 2);
+            height: 48px;
+            margin-bottom: 24px;
+        }
+
+        &__message {
+            height: 135px;
+            vertical-align: top;
+        }
+    }
 }
 
 .contact-info {
@@ -344,6 +434,11 @@ h4 {
         @include set-image-adventure-item("marketing");
 
         margin: 65px 15px 0;
+
+        &_add {
+            display: none;
+            opacity: 0;
+        }
 
         .item {
             &__logo {

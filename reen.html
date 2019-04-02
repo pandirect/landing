@@ -11,6 +11,26 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
+<div id="ContactUsModal" class="contact-us-modal modal fade" role="dialog">
+    <div class="modal-dialog contact-us-modal_wrapper">
+        <div class="modal-content">
+            <div class="modal-header modal-header-block">
+                <h2 class="modal-title float-left">Leave a message</h2>
+                <button type="button" class=" modal-header-block__close close float-right" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-input-block clearfix">
+                    <input class="modal-input-block__name float-left" type="text" maxlength="40" placeholder="Name (Required)">
+                    <input class="modal-input-block__email float-right" type="text" maxlength="40" placeholder="Email (Required)">
+                    <textarea class="modal-input-block__message" placeholder="Enter your message..."></textarea>
+                </form>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="contact-us-modal__button custom-button float-left" data-dismiss="modal">Submit message</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="wrap-container wrap-container_header">
     <div class="wrap-container_root clearfix">
         <div class="contact-info float-left clearfix">
@@ -31,10 +51,10 @@
     <div class="wrap-container_root nav-bar clearfix">
         <a class="nav-bar__logotype float-left" href="#"></a>
         <div class="nav-bar__menu menu float-right clearfix">
-            <div class="menu__item float-left">About us</div>
-            <div class="menu__item float-left">Portfolio</div>
-            <div class="menu__item float-left">Get in touch</div>
-            <div class="menu__item float-left">Contact us</div>
+            <div id="aboutUsLink" class="menu__item float-left">About us</div>
+            <div id="portfolioLink" class="menu__item float-left">Portfolio</div>
+            <div id="getInTouchLink" class="menu__item float-left">Get in touch</div>
+            <div class="menu__item float-left" data-toggle="modal" data-target="#ContactUsModal">Contact us</div>
         </div>
     </div>
 </div>
@@ -122,7 +142,7 @@
         </ol>
     </div>
 </div>
-<div class="wrap-container wrap-container_advantages-info">
+<div id="aboutUs" class="wrap-container wrap-container_advantages-info">
     <div class="wrap-container_root advantages-info">
         <h2 class="advantages-info__title">Beautiful. Clean. Responsive</h2>
         <h3 class="advantages-info__description">
@@ -161,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div id="addInformation" class="grid-x">
+            <div id="addInformation" class="advantages-info_items_add grid-x">
                 <div class="advantages-info_item cell large-8 clearfix">
                     <div class="item__logo item__logo_technology float-left"></div>
                     <div class="item-characteristic float-left">
@@ -196,11 +216,11 @@
                     </div>
                 </div>
             </div>
-            <div class="advantages-info__button custom-button float-center">Show more</div>
+            <div id="showMore" class="advantages-info__button custom-button float-center">Show more</div>
         </div>
     </div>
 </div>
-<div class="wrap-container wrap-container_example-work-info">
+<div id="portfolio" class="wrap-container wrap-container_example-work-info">
     <div class="wrap-container_root example-work-info">
         <h2 class="example-work-info__title">Check out our latest works</h2>
         <h3 class="example-work-info__description">
@@ -232,14 +252,14 @@
         </div>
     </div>
 </div>
-<div class="wrap-container wrap-container_cooperation-info">
+<div id="getInTouch" class="wrap-container wrap-container_cooperation-info">
     <div class="wrap-container_root cooperation-info clearfix">
         <h2 class="cooperation-info__title">Want to work with us?</h2>
         <h3 class="cooperation-info__description">
             Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque quiae sitiorem
             rest non restibusaes maio es dem tumquam.
         </h3>
-        <div class="cooperation-info__button custom-button float-center">Get in touch</div>
+        <div class="cooperation-info__button custom-button float-center" data-toggle="modal" data-target="#ContactUsModal">Get in touch</div>
     </div>
 </div>
 <div class="wrap-container wrap-container_site-map">
@@ -295,20 +315,17 @@
     <div class="wrap-container_root footer clearfix">
         <div class="footer__copyright">© 2014 REEN. All rights reserved.</div>
         <div class="footer__map clearfix">
-            <div class="footer__map_item float-left">Home</div>
+            <div class="footer__map_item float-left">About us</div>
             <div class="footer__map_item inactive float-left">·</div>
             <div class="footer__map_item float-left">Portfolio</div>
             <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Blog</div>
+            <div class="footer__map_item float-left">Get in touch</div>
             <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">About</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Services</div>
-            <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Contact</div>
+            <div class="footer__map_item float-left">Contact us</div>
         </div>
     </div>
 </div>
+<div id="scrollUp" class="scroll-up"></div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -318,5 +335,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="js/rollup.js"></script>
+<script src="js/show_more.js"></script>
+<script src="js/smooth_scroll.js"></script>
 </body>
 </html>
