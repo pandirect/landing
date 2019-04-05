@@ -3,11 +3,10 @@
 body {
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 h1 {
-    @include font-style(900, 78px, "Lato");
+    @include font-style(900, 78px, "Montserrat");
 
     color: #ffffff;
     text-align: center;
@@ -16,7 +15,7 @@ h1 {
 }
 
 h2 {
-    @include font-style(700, 44px, "Lato");
+    @include font-style(700, 44px, "Montserrat");
 
     color: #506a85;
     text-align: center;
@@ -24,7 +23,7 @@ h2 {
 }
 
 h3 {
-    @include font-style(400, 24px, "Source Sans Pro");
+    @include font-style(400, 24px, "Roboto");
 
     text-align: center;
     color: #73879c;
@@ -34,7 +33,7 @@ h3 {
 }
 
 h4 {
-    @include font-style(900, 16px, "Lato");
+    @include font-style(900, 16px, "Montserrat");
 
     color: #ffffff;
     letter-spacing: 1.5px;
@@ -82,7 +81,7 @@ h4 {
 }
 
 .custom-button {
-    @include font-style(700, 18px, "Source Sans Pro");
+    @include font-style(700, 18px, "Roboto");
 
     border-radius: 3px;
     background-color: #00bb9b;
@@ -99,25 +98,6 @@ h4 {
         transition: 0.25s linear;
     }
 
-}
-
-.scroll-up {
-    @include square(40px);
-    background: url(../img/background/icon_up_footer.png) no-repeat #3c5065;
-    background-size: 16px 9px;
-    background-position: center;
-    border-radius: 3px;
-    position: fixed;
-    right: 20px;
-    bottom: 22px;
-    opacity: 0.7;
-    display: none;
-
-    &:hover {
-        opacity: 1;
-        background-color: #506a85;
-        transition: 0.5s linear;
-    }
 }
 
 .contact-us-modal {
@@ -153,7 +133,7 @@ h4 {
         &__close {
             @include square(25px);
 
-            background-image: url(../img/button_close.png);
+            background-image: url("../img/button_close.png");
             background-position: center;
             background-size: 25px;
             background-repeat: no-repeat;
@@ -165,7 +145,7 @@ h4 {
 
     .modal-input-block {
         textarea, input {
-            @include font-style(400, 16px, "Source Sans Pro");
+            @include font-style(400, 16px, "Roboto");
 
             border-radius: 5px;
             border: 1px solid #dddddd !important;
@@ -192,7 +172,7 @@ h4 {
 
 .contact-info {
     &__item {
-        @include font-style(400, 12px, "Source Sans Pro");
+        @include font-style(400, 12px, "Roboto");
 
         color: #506a85;
         height: 20px;
@@ -222,27 +202,37 @@ h4 {
     @include set-image-networks("dribble");
 }
 
+.sticky-container {
+    &__background {
+        background-color: #ffffff;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        z-index: 20 !important;
+    }
+}
+
 .nav-bar {
-    padding: 35px 0;
+    padding: 25px 0;
+    background-color: #ffffff;
 
     &__logotype {
-        @include set-image("../img/logo/reen-logo-dark.png");
+        @include set-image("../img/logo/name-logo-dark.svg");
 
-        height: 40px;
-        width: 160px;
+        height: 50px;
+        width: 180px;
         margin: 0 16px;
         display: block;
+        background-size: 100%;
     }
 
     .menu {
         margin: 10px 0 0 73px;
 
         &__item {
-            @include font-style(700, 15px, "Source Sans Pro");
+            @include font-style(700, 15px, "Roboto");
 
             color: #506a85;
             text-transform: uppercase;
-            margin-right: 70px;
+            margin-right: 45px;
             cursor: pointer;
         }
     }
@@ -251,11 +241,25 @@ h4 {
 .slider-container {
     height: 800px;
 
-    @include set-slider-image("about-us");
-    @include set-slider-image("fresh");
-    @include set-slider-image("clean-code");
-    @include set-slider-image("creative");
-    @include set-slider-image("content-block");
+    &_about-us {
+        background: url("../img/background/slider/about-us-slide.png") no-repeat;
+    }
+
+    &_fresh {
+        background: url("../img/background/slider/fresh-slide.png") no-repeat;
+    }
+
+    &_clean-code {
+        background: url("../img/background/slider/clean-code-slide.png") no-repeat;
+    }
+
+    &_creative {
+        background: url("../img/background/slider/creative-slide.png") no-repeat;
+    }
+
+    &_content-block {
+        background: url("../img/background/slider/content-block-slide.png") no-repeat;
+    }
 
     &_root {
         height: 880px;
@@ -269,7 +273,7 @@ h4 {
         margin: auto;
 
         &__title {
-            @include font-style(900, 73px, "Lato");
+            @include font-style(900, 73px, "Montserrat");
 
             letter-spacing: 4.7px;
             margin: 0;
@@ -294,7 +298,7 @@ h4 {
         margin: auto;
 
         &__title {
-            @include font-style(900, 73px, "Lato");
+            @include font-style(900, 73px, "Montserrat");
 
             letter-spacing: 4.7px;
             max-width: 800px;
@@ -325,12 +329,13 @@ h4 {
         margin: auto;
 
         &__title {
-            @include font-style(900, 73px, "Lato");
+            @include font-style(900, 73px, "Montserrat");
 
             letter-spacing: 4.7px;
             text-align: left;
             line-height: 85px;
             padding: 20px 30px;
+            margin-right: 200px;
             background-color: #506a85;;
         }
 
@@ -357,7 +362,7 @@ h4 {
         margin: auto;
 
         &__title {
-            @include font-style(900, 73px, "Lato");
+            @include font-style(900, 73px, "Montserrat");
 
             letter-spacing: 4.7px;
             text-align: right;
@@ -389,7 +394,7 @@ h4 {
         margin: auto;
 
         &__title {
-            @include font-style(900, 73px, "Lato");
+            @include font-style(900, 73px, "Montserrat");
 
             letter-spacing: 4.7px;
             margin: 0;
@@ -408,21 +413,12 @@ h4 {
     }
 }
 
-
 .advantages-info {
     padding: 117px 0 130px;
 
     &__description {
         margin: 20px 190px 0;
         letter-spacing: -0.2px;
-    }
-
-    &_item {
-        margin-bottom: 60px;
-    }
-
-    &__button {
-        width: 295px;
     }
 
     &_items {
@@ -435,11 +431,6 @@ h4 {
 
         margin: 65px 15px 0;
 
-        &_add {
-            display: none;
-            opacity: 0;
-        }
-
         .item {
             &__logo {
                 @include square(70px);
@@ -450,19 +441,27 @@ h4 {
                 margin: 0 10px 0 30px;
 
                 &__title {
-                    @include font-style(700, 26px, "Lato");
+                    @include font-style(700, 26px, "Montserrat");
 
                     color: #506a85;
                 }
 
                 &__description {
-                    @include font-style(400, 16px, "Source Sans Pro");
+                    @include font-style(400, 16px, "Roboto");
 
                     color: #73879c;
                     margin: 20px 0 0;
                 }
             }
         }
+    }
+
+    &_item {
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        width: 295px;
     }
 }
 
@@ -489,7 +488,7 @@ h4 {
                 }
 
                 &__title {
-                    @include font-style(700, 20px, "Lato");
+                    @include font-style(700, 20px, "Montserrat");
 
                     color: #506a85;
                     text-align: center;
@@ -497,7 +496,7 @@ h4 {
                 }
 
                 &__author {
-                    @include font-style(400, 14px, "Source Sans Pro");
+                    @include font-style(400, 14px, "Roboto");
 
                     color: #73879c;
                     margin: 6px 0 0;
@@ -516,26 +515,14 @@ h4 {
                 @include set-image-works-item("signwall");
 
                 > div {
-                    height: 185px;
                     background-size: 90%;
                     background-position: center;
-                }
-            }
 
-            .items_navigation {
-                width: 80px;
-                margin-top: 45px;
-
-                .indicator {
-                    @include square(15px);
-
-                    margin-left: 10px;
-                    border-radius: 7px;
-                    background: #283645;
-                }
-
-                .active {
-                    background: #00bc9c;
+                    > div {
+                        height: 185px;
+                        background-size: calc(100% - 30px);
+                        background-position-x: center;
+                    }
                 }
             }
         }
@@ -560,7 +547,7 @@ h4 {
     }
 
     &__description {
-        @include font-style(400, 14px, "Source Sans Pro");
+        @include font-style(400, 14px, "Roboto");
 
         color: #a3b1bf;
         line-height: 22px;
@@ -568,9 +555,10 @@ h4 {
 
     .who-we-are_info {
         &__logo {
-            background: url("../img/logo/reen-logo-light.png") no-repeat;
-            height: 40px;
-            width: 160px;
+            background: url("../img/logo/name-logo-light.svg") no-repeat;
+            height: 50px;
+            width: 180px;
+            background-size: 100%;
         }
 
         &__description {
@@ -625,7 +613,7 @@ h4 {
         }
 
         .subscribe-update_button {
-            @include font-style(600, 14px, "Source Sans Pro");
+            @include font-style(600, 14px, "Roboto");
 
             position: absolute;
             right: 5px;
@@ -641,24 +629,26 @@ h4 {
     padding: 30px 15px;
 
     &__copyright {
-        @include font-style(400, 14px, "Source Sans Pro");
+        @include font-style(400, 14px, "Roboto");
 
         color: #707e8c;
         float: left;
     }
 
     &__map {
-        @include font-style(400, 14px, "Source Sans Pro");
+        @include font-style(400, 14px, "Roboto");
 
-        color: #707e8c;
         float: right;
 
         &_item {
+            color: #707e8c !important;
             margin-left: 10px;
             cursor: pointer;
+            display: block;
+            text-decoration: none !important;
 
             &:hover {
-                color: #00bc9c;
+                color: #00bc9c !important;
                 transition: 0.25s linear;
             }
         }
@@ -670,19 +660,138 @@ h4 {
     }
 }
 
-@media (max-width: 1200px) {
-    .nav-bar {
-        &__logotype {
-            display: none;
+.toggler-example {
+    padding: 10px 15px;
+
+    &__hamburger {
+        background-image: url("../img/background/hamburger_menu.png");
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 24px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .slider-container {
+        background-size: 100% !important;
+        height: 550px;
+
+        .about-us {
+            padding: 190px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Montserrat");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
         }
 
-        .menu {
-            display: none;
+        .fresh {
+            padding: 100px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Montserrat");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .clean-code {
+            padding: 80px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Montserrat");
+
+                line-height: 60px;
+                margin-right: 150px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .creative {
+            padding: 70px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Montserrat");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
+        }
+
+        .content-block {
+            padding: 140px 0 0;
+            width: calc(100% - 300px);
+
+            &__title {
+                @include font-style(900, 50px, "Montserrat");
+
+                line-height: 70px;
+            }
+
+            &__description {
+                font-size: 20px;
+            }
+
+            &__button {
+                margin-top: 35px;
+            }
         }
     }
+}
 
-    .about-us {
-        padding: 100px 50px;
+@media (max-width: 1200px) {
+    .slider-container {
+        background-size: 120% !important;
+        height: 530px;
+
+        .about-us {
+            padding: 120px 0 0;
+            width: calc(100% - 250px);
+        }
+
+        .clean-code {
+            padding: 50px 0 0;
+            width: calc(100% - 250px);
+        }
+
+        .content-block {
+            padding: 120px 0 0;
+        }
     }
 
     .advantages-info {
@@ -703,7 +812,7 @@ h4 {
                 }
 
                 &__title {
-                    @include font-style(700, 16px, "Lato");
+                    @include font-style(700, 16px, "Montserrat");
                 }
             }
         }
@@ -727,6 +836,29 @@ h4 {
 }
 
 @media (max-width: 1024px) {
+    .slider-container {
+        background-size: 120% !important;
+        height: 500px;
+
+        .about-us {
+            padding: 120px 0 0;
+        }
+
+        .fresh {
+            padding: 70px 0 0;
+        }
+
+        .creative {
+            padding: 45px 0 0;
+
+            &__title {
+                @include font-style(900, 40px, "Montserrat");
+
+                line-height: 50px;
+            }
+        }
+    }
+
     .advantages-info {
         &_item {
             padding: 0 50px 40px;
@@ -762,7 +894,41 @@ h4 {
     }
 }
 
+@media (max-width: 992px) {
+    .slider-container {
+        .clean-code {
+            &__title {
+                @include font-style(900, 40px, "Montserrat");
+
+                line-height: 50px;
+            }
+        }
+    }
+
+    .nav-bar {
+        padding: 10px;
+        width: 100%;
+        border: none;
+
+        .menu {
+            margin: 40px 0 0;
+        }
+
+        &__logotype, &__search-field {
+            display: none;
+        }
+
+        &_desktop {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 900px) {
+    .slider-container {
+        display: none;
+    }
+
     .example-work-info {
         .items_big {
             &__item {
@@ -770,7 +936,7 @@ h4 {
 
                 .item {
                     &__title {
-                        @include font-style(700, 14px !important, "Lato");
+                        @include font-style(700, 14px !important, "Montserrat");
                     }
                 }
             }
@@ -780,9 +946,10 @@ h4 {
 
 @media (max-width: 768px) {
     .example-work-info {
-        .items_small {
-            .items_navigation {
-                margin-top: 15px;
+        .items_image {
+            .item_card {
+                height: 170px;
+                background-size: 90%;
             }
         }
     }

@@ -4,29 +4,32 @@
     <title>Reen</title>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"><link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 </head>
 <body>
 <div id="ContactUsModal" class="contact-us-modal modal fade" role="dialog">
     <div class="modal-dialog contact-us-modal_wrapper">
         <div class="modal-content">
             <div class="modal-header modal-header-block">
-                <h2 class="modal-title float-left">Leave a message</h2>
+                <h2 class="modal-title float-left">Напишите нам</h2>
                 <button type="button" class=" modal-header-block__close close float-right" data-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <form class="modal-input-block clearfix">
-                    <input class="modal-input-block__name float-left" type="text" maxlength="40" placeholder="Name (Required)">
-                    <input class="modal-input-block__email float-right" type="text" maxlength="40" placeholder="Email (Required)">
-                    <textarea class="modal-input-block__message" placeholder="Enter your message..."></textarea>
+                    <input class="modal-input-block__name float-left" type="text" maxlength="40"
+                           placeholder="Ваше имя">
+                    <input class="modal-input-block__email float-right" type="text" maxlength="40"
+                           placeholder="Ваша почта">
+                    <textarea class="modal-input-block__message" placeholder="Ваше сообщение..."></textarea>
                 </form>
             </div>
             <div class="modal-footer clearfix">
-                <button type="button" class="contact-us-modal__button custom-button float-left" data-dismiss="modal">Submit message</button>
+                <button type="button" class="contact-us-modal__button custom-button float-left" data-dismiss="modal">
+                    Submit message
+                </button>
             </div>
         </div>
     </div>
@@ -47,14 +50,47 @@
         </div>
     </div>
 </div>
-<div class="wrap-container wrap-container_nav-bar">
-    <div class="wrap-container_root nav-bar clearfix">
-        <a class="nav-bar__logotype float-left" href="#"></a>
-        <div class="nav-bar__menu menu float-right clearfix">
-            <div id="aboutUsLink" class="menu__item float-left">About us</div>
-            <div id="portfolioLink" class="menu__item float-left">Portfolio</div>
-            <div id="getInTouchLink" class="menu__item float-left">Get in touch</div>
-            <div class="menu__item float-left" data-toggle="modal" data-target="#ContactUsModal">Contact us</div>
+<div class="wrap-container wrap-container_nav-bar sticky-container" data-sticky-container>
+    <div class="sticky-container__background" data-sticky data-margin-top="0">
+        <div class="wrap-container_root nav-bar clearfix">
+            <a class="nav-bar__logotype float-left" href="#"></a>
+            <div class="nav-bar__menu menu nav-bar_desktop float-right clearfix d-xs-none d-sm-none d-md-none d-lg-block d-xl-block"
+                 data-magellan data-animation-duration data-animation-easing
+            >
+                <a class="menu__item float-left" href="#aboutUs">О нас</a>
+                <a class="menu__item float-left" href="#services">Услуги</a>
+                <a class="menu__item float-left" href="#cycleWorks">Цикл работы</a>
+                <a class="menu__item float-left" href="#portfolio">Портфолио</a>
+                <a class="menu__item float-left" href="#contactUs">Связь с нами</a>
+            </div>
+            <nav class="navbar nav-bar nav-bar_mobile-menu navbar-light d-lg-none d-xl-none d-sm-block d-md-block clearfix">
+                <a class="navbar-brand nav-bar_mobile-menu float-left" href="#">Меню</a>
+                <button class="navbar-toggler float-right toggler-example" type="button" data-toggle="collapse"
+                        data-target="#mobileMenu"
+                        aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+                >
+                    <div class="toggler-example__hamburger"></div>
+                </button>
+                <div class="collapse menu navbar-collapse" id="mobileMenu">
+                    <ul class="navbar-nav mr-auto" data-magellan>
+                        <li class="nav-item menu__item">
+                            <a class="menu__item float-left" href="#aboutUs">О нас</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="menu__item float-left" href="#services">Услуги</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="menu__item float-left" href="#cycleWorks">Цикл работы</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="menu__item float-left" href="#portfolio">Портфолио</a>
+                        </li>
+                        <li class="nav-item menu__item">
+                            <a class="menu__item float-left" href="#contactUs">Связь с нами</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
 </div>
@@ -142,125 +178,182 @@
         </ol>
     </div>
 </div>
-<div id="aboutUs" class="wrap-container wrap-container_advantages-info">
-    <div class="wrap-container_root advantages-info">
-        <h2 class="advantages-info__title">Beautiful. Clean. Responsive</h2>
-        <h3 class="advantages-info__description">
-            REEN is a high-quality solution for those who want a beautiful website in no time. It's fully responsive and
-            will adapt itself to any mobile device. iPad, iPhone, Android, it doesn't matter. Your content will always
-            looks its absolute best.
-        </h3>
-        <div class="advantages-info_items grid-x clearfix">
-            <div class="advantages-info_item cell large-8 clearfix">
-                <div class="item__logo item__logo_heart float-left"></div>
-                <div class="item-characteristic float-left">
-                    <div class="item-characteristic__title">Passion</div>
-                    <div class="item-characteristic__description">
-                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque
-                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+<div class="sections">
+    <section id="aboutUs" data-magellan-target="aboutUs">
+        <div class="wrap-container wrap-container_advantages-info">
+            <div class="wrap-container_root advantages-info">
+                <h2 class="advantages-info__title">Beautiful. Clean. Responsive</h2>
+                <h3 class="advantages-info__description">
+                    REEN is a high-quality solution for those who want a beautiful website in no time. It's fully
+                    responsive and
+                    will adapt itself to any mobile device. iPad, iPhone, Android, it doesn't matter. Your content will
+                    always
+                    looks its absolute best.
+                </h3>
+                <div class="advantages-info_items grid-x">
+                    <div class="advantages-info_item cell large-8 clearfix">
+                        <div class="item__logo item__logo_heart float-left"></div>
+                        <div class="item-characteristic float-left">
+                            <div class="item-characteristic__title">Passion</div>
+                            <div class="item-characteristic__description">
+                                Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
+                                Laceaque
+                                quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis
+                                volor.
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="advantages-info_item cell large-8 clearfix">
-                <div class="item__logo item__logo_lamp float-left"></div>
-                <div class="item-characteristic float-left">
-                    <div class="item-characteristic__title">Creative</div>
-                    <div class="item-characteristic__description">
-                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque
-                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+                    <div class="advantages-info_item cell large-8 clearfix">
+                        <div class="item__logo item__logo_lamp float-left"></div>
+                        <div class="item-characteristic float-left">
+                            <div class="item-characteristic__title">Creative</div>
+                            <div class="item-characteristic__description">
+                                Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
+                                Laceaque
+                                quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis
+                                volor.
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="advantages-info_item cell large-8 clearfix">
-                <div class="item__logo item__logo_star float-left"></div>
-                <div class="item-characteristic float-left">
-                    <div class="item-characteristic__title">Quality</div>
-                    <div class="item-characteristic__description">
-                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque
-                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+                    <div class="advantages-info_item cell large-8 clearfix">
+                        <div class="item__logo item__logo_star float-left"></div>
+                        <div class="item-characteristic float-left">
+                            <div class="item-characteristic__title">Quality</div>
+                            <div class="item-characteristic__description">
+                                Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
+                                Laceaque
+                                quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis
+                                volor.
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div id="addInformation" class="advantages-info_items_add grid-x">
-                <div class="advantages-info_item cell large-8 clearfix">
-                    <div class="item__logo item__logo_technology float-left"></div>
-                    <div class="item-characteristic float-left">
-                        <div class="item-characteristic__title">Technology</div>
-                        <div class="item-characteristic__description">
-                            Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
-                            Laceaque
-                            quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+                    <div id="addInformation" class="advantages-info_items_add collapse">
+                        <div class="grid-x">
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_technology float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Technology</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_social float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Social</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages-info_item cell large-8 clearfix">
+                                <div class="item__logo item__logo_marketing float-left"></div>
+                                <div class="item-characteristic float-left">
+                                    <div class="item-characteristic__title">Marketing</div>
+                                    <div class="item-characteristic__description">
+                                        Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut
+                                        labor.
+                                        Laceaque
+                                        quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped
+                                        modis volor.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="advantages-info_item cell large-8 clearfix">
-                    <div class="item__logo item__logo_social float-left"></div>
-                    <div class="item-characteristic float-left">
-                        <div class="item-characteristic__title">Social</div>
-                        <div class="item-characteristic__description">
-                            Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
-                            Laceaque
-                            quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+                <div class="advantages-info__button custom-button float-center" data-toggle="collapse"
+                     href="#addInformation" role="button" aria-expanded="false" aria-controls="addInformation"
+                >
+                    Show advantages
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" data-magellan-target="services"></section>
+    <section id="cycleWorks" data-magellan-target="cycleWorks"></section>
+    <section id="portfolio" data-magellan-target="portfolio">
+        <div class="wrap-container wrap-container_example-work-info">
+            <div class="wrap-container_root example-work-info">
+                <h2 class="example-work-info__title">Check out our latest works</h2>
+                <h3 class="example-work-info__description">
+                    Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
+                </h3>
+                <div class="items_big grid-x">
+                    <div class="items_big__item cell medium-12 small-24">
+                        <img class="item__logo first" src="img/works/grand-motel.png" alt="Grand Motel"/>
+                        <div class="item">
+                            <div class="item__title">Grand Motel gets an identity brushup</div>
+                            <div class="item__author">Identity</div>
+                        </div>
+                    </div>
+                    <div class="items_big__item cell medium-12 small-24">
+                        <img class="item__logo second" src="img/works/fresh-branding.png" alt="Fresh branding"/>
+                        <div class="item">
+                            <div class="item__title">Fresh branding for a creative startup</div>
+                            <div class="item__author">Identity</div>
                         </div>
                     </div>
                 </div>
-                <div class="advantages-info_item cell large-8 clearfix">
-                    <div class="item__logo item__logo_marketing float-left"></div>
-                    <div class="item-characteristic float-left">
-                        <div class="item-characteristic__title">Marketing</div>
-                        <div class="item-characteristic__description">
-                            Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
-                            Laceaque
-                            quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.
+                <div class="items_small custom-slider clearfix">
+                    <div id="workCarousel" class="main-slider carousel slide" data-ride="carousel">
+                        <div class="carousel-inner items_image">
+                            <div class="carousel-item grid-x clearfix active">
+                                <div class="item_card item_business-card cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_plate cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_sticker cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_signwall cell medium-6 small-12 float-left"></div>
+                            </div>
+                            <div class="carousel-item grid-x clearfix">
+                                <div class="item_card item_business-card cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_plate cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_sticker cell medium-6 small-12 float-left"></div>
+                                <div class="item_card item_signwall cell medium-6 small-12 float-left"></div>
+                            </div>
                         </div>
+                        <a class="carousel-control-prev main-slider__button_prev" href="#workCarousel" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next main-slider__button_next" href="#workCarousel" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#workCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#workCarousel" data-slide-to="1"></li>
+                        </ol>
                     </div>
                 </div>
             </div>
-            <div id="showMore" class="advantages-info__button custom-button float-center">Show more</div>
         </div>
-    </div>
-</div>
-<div id="portfolio" class="wrap-container wrap-container_example-work-info">
-    <div class="wrap-container_root example-work-info">
-        <h2 class="example-work-info__title">Check out our latest works</h2>
-        <h3 class="example-work-info__description">
-            Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor.
-        </h3>
-        <div class="items_big grid-x">
-            <div class="items_big__item cell medium-12 small-24">
-                <img class="item__logo first" src="img/works/grand-motel.png" alt="Grand Motel" />
-                <div class="item">
-                    <div class="item__title">Grand Motel gets an identity brushup</div>
-                    <div class="item__author">Identity</div>
-                </div>
-            </div>
-            <div class="items_big__item cell medium-12 small-24">
-                <img class="item__logo second" src="img/works/fresh-branding.png" alt="Fresh branding" />
-                <div class="item">
-                    <div class="item__title">Fresh branding for a creative startup</div>
-                    <div class="item__author">Identity</div>
+    </section>
+    <section id="contactUs" data-magellan-target="contactUs">
+        <div class="wrap-container wrap-container_cooperation-info">
+            <div class="wrap-container_root cooperation-info clearfix">
+                <h2 class="cooperation-info__title">Want to work with us?</h2>
+                <h3 class="cooperation-info__description">
+                    Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque quiae
+                    sitiorem
+                    rest non restibusaes maio es dem tumquam.
+                </h3>
+                <div class="cooperation-info__button custom-button float-center" data-toggle="modal"
+                     data-target="#ContactUsModal">Get in touch
                 </div>
             </div>
         </div>
-        <div class="items_small custom-slider clearfix">
-            <div class="items_image grid-x">
-                <div class="item_business-card cell medium-6 small-12"></div>
-                <div class="item_plate cell medium-6 small-12"></div>
-                <div class="item_sticker cell medium-6 small-12"></div>
-                <div class="item_signwall cell medium-6 small-12"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="getInTouch" class="wrap-container wrap-container_cooperation-info">
-    <div class="wrap-container_root cooperation-info clearfix">
-        <h2 class="cooperation-info__title">Want to work with us?</h2>
-        <h3 class="cooperation-info__description">
-            Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque quiae sitiorem
-            rest non restibusaes maio es dem tumquam.
-        </h3>
-        <div class="cooperation-info__button custom-button float-center" data-toggle="modal" data-target="#ContactUsModal">Get in touch</div>
-    </div>
+    </section>
 </div>
 <div class="wrap-container wrap-container_site-map">
     <div class="wrap-container_root site-map grid-x">
@@ -304,7 +397,7 @@
                     Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.
                 </div>
                 <form class="email_form" method="post">
-                    <input type="text" name="email" class="email_form__input" placeholder="Enter your email address" />
+                    <input type="text" name="email" class="email_form__input" placeholder="Enter your email address"/>
                     <div class="subscribe-update_button custom-button">Subscribe</div>
                 </form>
             </div>
@@ -313,15 +406,17 @@
 </div>
 <div class="wrap-container wrap-container_footer">
     <div class="wrap-container_root footer clearfix">
-        <div class="footer__copyright">© 2014 REEN. All rights reserved.</div>
-        <div class="footer__map clearfix">
-            <div class="footer__map_item float-left">About us</div>
+        <div class="footer__copyright">© 2019 Pandirect. Все права защищены.</div>
+        <div class="footer__map clearfix" data-magellan data-animation-duration data-animation-easing>
+            <a class="footer__map_item float-left" href="#aboutUs">О нас</a>
             <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Portfolio</div>
+            <a class="footer__map_item float-left" href="#services">Услуги</a>
             <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Get in touch</div>
+            <a class="footer__map_item float-left" href="#cycleWorks">Цикл работы</a>
             <div class="footer__map_item inactive float-left">·</div>
-            <div class="footer__map_item float-left">Contact us</div>
+            <a class="footer__map_item float-left" href="#portfolio">Портфолио</a>
+            <div class="footer__map_item inactive float-left">·</div>
+            <a class="footer__map_item float-left" href="#contactUs">Связь с нами</a>
         </div>
     </div>
 </div>
@@ -335,8 +430,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="js/rollup.js"></script>
-<script src="js/show_more.js"></script>
-<script src="js/smooth_scroll.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
 </body>
 </html>

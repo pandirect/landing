@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  padding: 0;
-  position: relative; }
+  padding: 0; }
 
 h1 {
-  font-family: "Lato";
+  font-family: "Montserrat";
   font-size: 78px;
   font-weight: 900;
   color: #ffffff;
@@ -13,7 +12,7 @@ h1 {
   text-transform: uppercase; }
 
 h2 {
-  font-family: "Lato";
+  font-family: "Montserrat";
   font-size: 44px;
   font-weight: 700;
   color: #506a85;
@@ -21,7 +20,7 @@ h2 {
   letter-spacing: 0.9px; }
 
 h3 {
-  font-family: "Source Sans Pro";
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: 400;
   text-align: center;
@@ -31,7 +30,7 @@ h3 {
   letter-spacing: -0.2px; }
 
 h4 {
-  font-family: "Lato";
+  font-family: "Montserrat";
   font-size: 16px;
   font-weight: 900;
   color: #ffffff;
@@ -69,7 +68,7 @@ h4 {
   background-color: #283645; }
 
 .custom-button {
-  font-family: "Source Sans Pro";
+  font-family: "Roboto";
   font-size: 18px;
   font-weight: 700;
   border-radius: 3px;
@@ -84,23 +83,6 @@ h4 {
     border-bottom: 2px solid #148e76;
     background-color: #17a78b;
     transition: 0.25s linear; }
-
-.scroll-up {
-  height: 40px;
-  width: 40px;
-  background: url(../img/background/icon_up_footer.png) no-repeat #3c5065;
-  background-size: 16px 9px;
-  background-position: center;
-  border-radius: 3px;
-  position: fixed;
-  right: 20px;
-  bottom: 22px;
-  opacity: 0.7;
-  display: none; }
-  .scroll-up:hover {
-    opacity: 1;
-    background-color: #506a85;
-    transition: 0.5s linear; }
 
 .contact-us-modal {
   background-color: #ffffff75; }
@@ -125,7 +107,7 @@ h4 {
     .contact-us-modal .modal-header-block__close {
       height: 25px;
       width: 25px;
-      background-image: url(../img/button_close.png);
+      background-image: url("../img/button_close.png");
       background-position: center;
       background-size: 25px;
       background-repeat: no-repeat;
@@ -133,7 +115,7 @@ h4 {
       top: 15px;
       right: 10px; }
   .contact-us-modal .modal-input-block textarea, .contact-us-modal .modal-input-block input {
-    font-family: "Source Sans Pro";
+    font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
     border-radius: 5px;
@@ -153,7 +135,7 @@ h4 {
     vertical-align: top; }
 
 .contact-info__item {
-  font-family: "Source Sans Pro";
+  font-family: "Roboto";
   font-size: 12px;
   font-weight: 400;
   color: #506a85;
@@ -217,49 +199,46 @@ h4 {
     background-position: center;
     background-repeat: no-repeat; }
 
+.sticky-container__background {
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  z-index: 20 !important; }
+
 .nav-bar {
-  padding: 35px 0; }
+  padding: 25px 0;
+  background-color: #ffffff; }
   .nav-bar__logotype {
-    background-image: url("../img/logo/reen-logo-dark.png");
+    background-image: url("../img/logo/name-logo-dark.svg");
     background-position: center;
     background-repeat: no-repeat;
-    height: 40px;
-    width: 160px;
+    height: 50px;
+    width: 180px;
     margin: 0 16px;
-    display: block; }
+    display: block;
+    background-size: 100%; }
   .nav-bar .menu {
     margin: 10px 0 0 73px; }
     .nav-bar .menu__item {
-      font-family: "Source Sans Pro";
+      font-family: "Roboto";
       font-size: 15px;
       font-weight: 700;
       color: #506a85;
       text-transform: uppercase;
-      margin-right: 70px;
+      margin-right: 45px;
       cursor: pointer; }
 
 .slider-container {
   height: 800px; }
   .slider-container_about-us {
-    background-image: url("../img/background/slider/about-us-slide.png");
-    background-position: center;
-    background-repeat: no-repeat; }
+    background: url("../img/background/slider/about-us-slide.png") no-repeat; }
   .slider-container_fresh {
-    background-image: url("../img/background/slider/fresh-slide.png");
-    background-position: center;
-    background-repeat: no-repeat; }
+    background: url("../img/background/slider/fresh-slide.png") no-repeat; }
   .slider-container_clean-code {
-    background-image: url("../img/background/slider/clean-code-slide.png");
-    background-position: center;
-    background-repeat: no-repeat; }
+    background: url("../img/background/slider/clean-code-slide.png") no-repeat; }
   .slider-container_creative {
-    background-image: url("../img/background/slider/creative-slide.png");
-    background-position: center;
-    background-repeat: no-repeat; }
+    background: url("../img/background/slider/creative-slide.png") no-repeat; }
   .slider-container_content-block {
-    background-image: url("../img/background/slider/content-block-slide.png");
-    background-position: center;
-    background-repeat: no-repeat; }
+    background: url("../img/background/slider/content-block-slide.png") no-repeat; }
   .slider-container_root {
     height: 880px; }
   .slider-container .about-us {
@@ -269,7 +248,7 @@ h4 {
     padding: 240px 0 210px;
     margin: auto; }
     .slider-container .about-us__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 73px;
       font-weight: 900;
       letter-spacing: 4.7px;
@@ -287,7 +266,7 @@ h4 {
     padding: 240px 0 210px;
     margin: auto; }
     .slider-container .fresh__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 73px;
       font-weight: 900;
       letter-spacing: 4.7px;
@@ -311,13 +290,14 @@ h4 {
     padding: 200px 0 210px;
     margin: auto; }
     .slider-container .clean-code__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 73px;
       font-weight: 900;
       letter-spacing: 4.7px;
       text-align: left;
       line-height: 85px;
       padding: 20px 30px;
+      margin-right: 200px;
       background-color: #506a85; }
     .slider-container .clean-code__description {
       max-width: 700px;
@@ -336,7 +316,7 @@ h4 {
     padding: 85px 0 210px;
     margin: auto; }
     .slider-container .creative__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 73px;
       font-weight: 900;
       letter-spacing: 4.7px;
@@ -361,7 +341,7 @@ h4 {
     padding: 78px 0 210px;
     margin: auto; }
     .slider-container .content-block__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 73px;
       font-weight: 900;
       letter-spacing: 4.7px;
@@ -379,10 +359,6 @@ h4 {
   .advantages-info__description {
     margin: 20px 190px 0;
     letter-spacing: -0.2px; }
-  .advantages-info_item {
-    margin-bottom: 60px; }
-  .advantages-info__button {
-    width: 295px; }
   .advantages-info_items {
     margin: 65px 15px 0; }
     .advantages-info_items .item__logo_heart {
@@ -409,9 +385,6 @@ h4 {
       background-image: url("../img/background/info_column/icon_marketing.png");
       background-position: center;
       background-repeat: no-repeat; }
-    .advantages-info_items_add {
-      display: none;
-      opacity: 0; }
     .advantages-info_items .item__logo {
       height: 70px;
       width: 70px; }
@@ -419,16 +392,20 @@ h4 {
       width: calc(100% - 110px);
       margin: 0 10px 0 30px; }
       .advantages-info_items .item-characteristic__title {
-        font-family: "Lato";
+        font-family: "Montserrat";
         font-size: 26px;
         font-weight: 700;
         color: #506a85; }
       .advantages-info_items .item-characteristic__description {
-        font-family: "Source Sans Pro";
+        font-family: "Roboto";
         font-size: 16px;
         font-weight: 400;
         color: #73879c;
         margin: 20px 0 0; }
+  .advantages-info_item {
+    margin-bottom: 40px; }
+  .advantages-info__button {
+    width: 295px; }
 
 .example-work-info {
   padding: 120px 0 140px; }
@@ -445,14 +422,14 @@ h4 {
         width: calc(100% - 30px);
         margin-left: 15px; }
       .example-work-info .items_big .item__title {
-        font-family: "Lato";
+        font-family: "Montserrat";
         font-size: 20px;
         font-weight: 700;
         color: #506a85;
         text-align: center;
         letter-spacing: 0.3px; }
       .example-work-info .items_big .item__author {
-        font-family: "Source Sans Pro";
+        font-family: "Roboto";
         font-size: 14px;
         font-weight: 400;
         color: #73879c;
@@ -473,20 +450,12 @@ h4 {
       background-image: url("../img/works/signwall.png");
       background-repeat: no-repeat; }
     .example-work-info .items_small .items_image > div {
-      height: 185px;
       background-size: 90%;
       background-position: center; }
-    .example-work-info .items_small .items_navigation {
-      width: 80px;
-      margin-top: 45px; }
-      .example-work-info .items_small .items_navigation .indicator {
-        height: 15px;
-        width: 15px;
-        margin-left: 10px;
-        border-radius: 7px;
-        background: #283645; }
-      .example-work-info .items_small .items_navigation .active {
-        background: #00bc9c; }
+      .example-work-info .items_small .items_image > div > div {
+        height: 185px;
+        background-size: calc(100% - 30px);
+        background-position-x: center; }
 
 .cooperation-info {
   padding: 115px 130px 130px; }
@@ -500,15 +469,16 @@ h4 {
   .site-map_block {
     padding: 0 10px; }
   .site-map__description {
-    font-family: "Source Sans Pro";
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
     color: #a3b1bf;
     line-height: 22px; }
   .site-map .who-we-are_info__logo {
-    background: url("../img/logo/reen-logo-light.png") no-repeat;
-    height: 40px;
-    width: 160px; }
+    background: url("../img/logo/name-logo-light.svg") no-repeat;
+    height: 50px;
+    width: 180px;
+    background-size: 100%; }
   .site-map .who-we-are_info__description {
     margin-top: 10px; }
   .site-map .works-info .item_business-card {
@@ -577,7 +547,7 @@ h4 {
       border: none;
       padding-right: 100px; }
   .site-map .updates .subscribe-update_button {
-    font-family: "Source Sans Pro";
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 600;
     position: absolute;
@@ -590,34 +560,115 @@ h4 {
 .footer {
   padding: 30px 15px; }
   .footer__copyright {
-    font-family: "Source Sans Pro";
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
     color: #707e8c;
     float: left; }
   .footer__map {
-    font-family: "Source Sans Pro";
+    font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
-    color: #707e8c;
     float: right; }
     .footer__map_item {
+      color: #707e8c !important;
       margin-left: 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      display: block;
+      text-decoration: none !important; }
       .footer__map_item:hover {
-        color: #00bc9c;
+        color: #00bc9c !important;
         transition: 0.25s linear; }
     .footer__map .inactive {
       cursor: default !important;
       color: #707e8c !important; }
 
+.toggler-example {
+  padding: 10px 15px; }
+  .toggler-example__hamburger {
+    background-image: url("../img/background/hamburger_menu.png");
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 24px; }
+
+@media (max-width: 1500px) {
+  .slider-container {
+    background-size: 100% !important;
+    height: 550px; }
+    .slider-container .about-us {
+      padding: 190px 0 0;
+      width: calc(100% - 300px); }
+      .slider-container .about-us__title {
+        font-family: "Montserrat";
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 70px; }
+      .slider-container .about-us__description {
+        font-size: 20px; }
+      .slider-container .about-us__button {
+        margin-top: 35px; }
+    .slider-container .fresh {
+      padding: 100px 0 0;
+      width: calc(100% - 300px); }
+      .slider-container .fresh__title {
+        font-family: "Montserrat";
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 70px; }
+      .slider-container .fresh__description {
+        font-size: 20px; }
+      .slider-container .fresh__button {
+        margin-top: 35px; }
+    .slider-container .clean-code {
+      padding: 80px 0 0;
+      width: calc(100% - 300px); }
+      .slider-container .clean-code__title {
+        font-family: "Montserrat";
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 60px;
+        margin-right: 150px; }
+      .slider-container .clean-code__description {
+        font-size: 20px; }
+      .slider-container .clean-code__button {
+        margin-top: 35px; }
+    .slider-container .creative {
+      padding: 70px 0 0;
+      width: calc(100% - 300px); }
+      .slider-container .creative__title {
+        font-family: "Montserrat";
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 70px; }
+      .slider-container .creative__description {
+        font-size: 20px; }
+      .slider-container .creative__button {
+        margin-top: 35px; }
+    .slider-container .content-block {
+      padding: 140px 0 0;
+      width: calc(100% - 300px); }
+      .slider-container .content-block__title {
+        font-family: "Montserrat";
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 70px; }
+      .slider-container .content-block__description {
+        font-size: 20px; }
+      .slider-container .content-block__button {
+        margin-top: 35px; } }
+
 @media (max-width: 1200px) {
-  .nav-bar__logotype {
-    display: none; }
-  .nav-bar .menu {
-    display: none; }
-  .about-us {
-    padding: 100px 50px; }
+  .slider-container {
+    background-size: 120% !important;
+    height: 530px; }
+    .slider-container .about-us {
+      padding: 120px 0 0;
+      width: calc(100% - 250px); }
+    .slider-container .clean-code {
+      padding: 50px 0 0;
+      width: calc(100% - 250px); }
+    .slider-container .content-block {
+      padding: 120px 0 0; }
   .advantages-info {
     padding: 50px 20px; }
   .example-work-info {
@@ -627,7 +678,7 @@ h4 {
       .example-work-info .items_big .item__logo:first-child {
         margin-left: 15px; }
       .example-work-info .items_big .item__title {
-        font-family: "Lato";
+        font-family: "Montserrat";
         font-size: 16px;
         font-weight: 700; }
     .example-work-info .items_small {
@@ -640,6 +691,20 @@ h4 {
     padding: 30px 20px; } }
 
 @media (max-width: 1024px) {
+  .slider-container {
+    background-size: 120% !important;
+    height: 500px; }
+    .slider-container .about-us {
+      padding: 120px 0 0; }
+    .slider-container .fresh {
+      padding: 70px 0 0; }
+    .slider-container .creative {
+      padding: 45px 0 0; }
+      .slider-container .creative__title {
+        font-family: "Montserrat";
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 50px; }
   .advantages-info_item {
     padding: 0 50px 40px; }
   .advantages-info__description {
@@ -654,17 +719,37 @@ h4 {
       background-size: 124px 85px;
       width: 130px; } }
 
+@media (max-width: 992px) {
+  .slider-container .clean-code__title {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 50px; }
+  .nav-bar {
+    padding: 10px;
+    width: 100%;
+    border: none; }
+    .nav-bar .menu {
+      margin: 40px 0 0; }
+    .nav-bar__logotype, .nav-bar__search-field {
+      display: none; }
+    .nav-bar_desktop {
+      display: none; } }
+
 @media (max-width: 900px) {
+  .slider-container {
+    display: none; }
   .example-work-info .items_big__item {
     margin-bottom: 10px; }
     .example-work-info .items_big__item .item__title {
-      font-family: "Lato";
+      font-family: "Montserrat";
       font-size: 14px !important;
       font-weight: 700; } }
 
 @media (max-width: 768px) {
-  .example-work-info .items_small .items_navigation {
-    margin-top: 15px; }
+  .example-work-info .items_image .item_card {
+    height: 170px;
+    background-size: 90%; }
   .site-map_block {
     padding: 20px; }
   .site-map .works-info {
