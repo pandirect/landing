@@ -335,7 +335,6 @@ h4 {
             text-align: left;
             line-height: 85px;
             padding: 20px 30px;
-            margin-right: 200px;
             background-color: #506a85;;
         }
 
@@ -417,7 +416,7 @@ h4 {
     padding: 117px 0 130px;
 
     &__description {
-        margin: 20px 190px 0;
+        margin: 20px 60px 0;
         letter-spacing: -0.2px;
     }
 
@@ -722,7 +721,6 @@ h4 {
                 @include font-style(900, 50px, "Montserrat");
 
                 line-height: 60px;
-                margin-right: 150px;
             }
 
             &__description {
