@@ -297,7 +297,6 @@ h4 {
       text-align: left;
       line-height: 85px;
       padding: 20px 30px;
-      margin-right: 200px;
       background-color: #506a85; }
     .slider-container .clean-code__description {
       max-width: 700px;
@@ -357,7 +356,7 @@ h4 {
 .advantages-info {
   padding: 117px 0 130px; }
   .advantages-info__description {
-    margin: 20px 190px 0;
+    margin: 20px 60px 0;
     letter-spacing: -0.2px; }
   .advantages-info_items {
     margin: 65px 15px 0; }
@@ -626,8 +625,7 @@ h4 {
         font-family: "Montserrat";
         font-size: 50px;
         font-weight: 900;
-        line-height: 60px;
-        margin-right: 150px; }
+        line-height: 60px; }
       .slider-container .clean-code__description {
         font-size: 20px; }
       .slider-container .clean-code__button {
