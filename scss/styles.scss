@@ -1,994 +1,478 @@
 @import "utils";
 
-body {
+body, h1, h2, p, ul, li, label {
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    @include font-style(900, 78px, "Montserrat");
+    @include font-style(700, 40px, "SF UI Display");
 
     color: #ffffff;
-    text-align: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    line-height: 50px;
 }
 
 h2 {
-    @include font-style(700, 44px, "Montserrat");
+    @include font-style(500, 42px, "SF UI Display");
 
-    color: #506a85;
+    color: #222328;
+    line-height: 45px;
+}
+
+.button {
+    @include font-style(500, 18px, "SF UI Display");
+
+    line-height: 24px;
     text-align: center;
-    letter-spacing: 0.9px;
-}
+    padding: 15px 30px;
+    display: block;
+    border-radius: 29px;
+    border: 2px solid #ffffff;
+    transition: 0.25s;
 
-h3 {
-    @include font-style(400, 24px, "Roboto");
-
-    text-align: center;
-    color: #73879c;
-    line-height: 34px;
-    margin-top: 20px;
-    letter-spacing: -0.2px;
-}
-
-h4 {
-    @include font-style(900, 16px, "Montserrat");
-
-    color: #ffffff;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 23px;
-}
-
-.wrap-container {
-    &_root {
-        max-width: 1200px;
-        width: 100%;
-        margin: auto;
+    &:focus {
+        outline: none;
     }
 
-    &_header {
-        box-shadow: 0.5px 0.866px 0 #e6e9ed;
-        background-color: #f5f7f9;
-    }
+    &-blue {
+        color: #ffffff;
+        background-color: #2290ff;
+        border-color: #2290ff;
 
-    &_nav-bar {
-        box-shadow: 0.5px 0.866px 0 #e6e9ed;
-        background-color: #ffffff;
-    }
+        &:hover {
+            color: #ffffff;
+            box-shadow: 0 4px 16px 0 rgba(255, 255, 255, 0.25);
+        }
 
-    &_advantages-info {
-        box-shadow: 0.5px 0.866px 0 #e6e9ed;
-        background-color: #ffffff;
-    }
-
-    &_example-work-info {
-        background-color: #f2f5f7;
-    }
-
-    &_cooperation-info {
-        background-color: #ffffff;
-    }
-
-    &_site-map {
-        background-color: #2f4052;
-    }
-
-    &_footer {
-        background-color: #283645;
-    }
-}
-
-.custom-button {
-    @include font-style(700, 18px, "Roboto");
-
-    border-radius: 3px;
-    background-color: #00bb9b;
-    border-bottom: 2px solid #00a085;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 18px;
-    cursor: pointer;
-
-    &:hover, &:active {
-        border-bottom: 2px solid #148e76;
-        background-color: #17a78b;
-        transition: 0.25s linear;
-    }
-
-}
-
-.contact-us-modal {
-    background-color: #ffffff75;
-
-    &_wrapper {
-        max-width: 970px;
-        border-radius: 10px;
-        background-color: #ffffff;
-        padding: 30px 40px 50px 40px;
-        box-shadow: 0 7px 40px rgba(0, 0, 0, 0.5);
-
-        > div {
-            border: none;
-
-            > div {
-                border: none;
-            }
+        &:active {
+            background-color: #226ad7;
+            border-color: #226ad7;
         }
     }
 
-    &__button {
-        margin-top: 40px;
-        width: 295px;
-    }
+    &-white {
+        color: #2290ff;
+        background-color: #ffffff;
+        border-color: #2290ff;
 
-    .modal-header-block {
-        border: none;
-        padding-top: 0;
-        padding-bottom: 26px;
-        position: relative;
-
-        &__close {
-            @include square(25px);
-
-            background-image: url("../img/button_close.png");
-            background-position: center;
-            background-size: 25px;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 15px;
-            right: 10px;
-        }
-    }
-
-    .modal-input-block {
-        textarea, input {
-            @include font-style(400, 16px, "Roboto");
-
-            border-radius: 5px;
-            border: 1px solid #dddddd !important;
-            box-shadow: none;
-            background-color: #f8fafd;
-            color: #757575;
-            padding: 12px 18px;
-            line-height: 22px;
-            display: block;
+        &:hover {
+            color: #2290ff;
+            box-shadow: 0 4px 16px 0 rgba(34, 144, 255, 0.5);
         }
 
-        &__name, &__email {
-            width: calc((100% - 30px) / 2);
-            height: 48px;
-            margin-bottom: 24px;
-        }
-
-        &__message {
-            height: 135px;
-            vertical-align: top;
+        &:active {
+            border-color: #226ad7;
         }
     }
 }
 
-.contact-info {
-    &__item {
-        @include font-style(400, 12px, "Roboto");
-
-        color: #506a85;
-        height: 20px;
-        margin: 11px 10px 9px 11px;
-        cursor: default;
-    }
-
-    @include set-image-contacts-header("email");
-    @include set-image-contacts-header("phone");
+.wrap {
+    display: flex;
+    height: 100vh;
 }
 
-.networks {
-    margin: 10px 18px;
-
-    &__item {
-        @include square(20px);
-
-        margin-right: 4px;
-        cursor: pointer;
-    }
-
-    @include set-image-networks("facebook");
-    @include set-image-networks("google");
-    @include set-image-networks("twitter");
-    @include set-image-networks("pinterest");
-    @include set-image-networks("behance");
-    @include set-image-networks("dribble");
-}
-
-.sticky-container {
-    &__background {
-        background-color: #ffffff;
-        border-bottom: 1px solid rgb(204, 204, 204);
-        z-index: 20 !important;
-    }
-}
-
-.nav-bar {
-    padding: 25px 0;
+.main-menu {
+    width: 240px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
 
-    &__logotype {
-        @include set-image("../img/logo/name-logo-dark.svg");
+    &-logo {
+        display: flex;
+        margin: 50px auto 0 auto;
+    }
 
-        height: 50px;
-        width: 180px;
-        margin: 0 16px;
+    .navbar {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        padding: 0;
+
+        .navigate {
+
+            &-item {
+                width: 100%;
+
+
+                .nav-link {
+                    @include font-style(400, 15px, "Roboto");
+
+                    color: #919191;
+                    border-left: 6px solid #ffffff;
+                    display: block;
+                    padding-left: 60px;
+                    margin: 8px 0;
+                    transition: 0.25s;
+
+                    &:hover {
+                        color: #2290FF;
+                    }
+
+                    &.active {
+                        @include font-style(700, 15px, "Roboto");
+
+                        border-left-color: #2290FF;
+                        color: #2290FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sections {
+    width: calc(100% - 240px);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.main-section {
+    position: relative;
+
+    &-content {
+        @include square(100%);
+
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > div > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-description {
+            width: 600px;
+            margin: auto;
+
+            .pre-title {
+                @include font-style(300, 16px, "SF UI Display");
+
+                color: #ffffff;
+                line-height: 24px;
+            }
+
+            .title {
+                margin: 10px 0 15px;
+            }
+
+            .description {
+                @include font-style(300, 15px, "SF UI Display");
+
+                color: #ffffff;
+                line-height: 24px;
+            }
+
+            .button {
+                width: 200px;
+                margin-top: 40px;
+            }
+        }
+
+        .main-image {
+            margin: auto;
+
+            > div {
+                width: 100%;
+
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &-background {
+        width: 100%;
+
+        .background {
+            width: 100%;
+            z-index: 0;
+        }
+    }
+}
+
+.amenities-section {
+    margin: 80px auto;
+
+    &-tabs {
+        border: none;
+        justify-content: center;
+    }
+
+    &-containers {
+        width: 100%;
+        margin-top: 50px;
+
+        > div {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .nav-link {
+        @include font-style(500, 18px, "SF UI Display");
+
+        color: #4F5362;
+        background-color: #ffffff;
+        line-height: 18px;
+        border-radius: 29px;
+        text-align: center;
+        padding: 20px 35px;
+        min-width: 160px;
         display: block;
-        background-size: 100%;
-    }
+        border: none;
+        transition: 0.25s;
+        margin: 0 10px;
 
-    .menu {
-        margin: 10px 0 0 73px;
-
-        &__item {
-            @include font-style(700, 15px, "Roboto");
-
-            color: #506a85;
-            text-transform: uppercase;
-            margin-right: 45px;
-            cursor: pointer;
-        }
-    }
-}
-
-.slider-container {
-    height: 800px;
-
-    &_about-us {
-        background: url("../img/background/slider/about-us-slide.png") no-repeat;
-    }
-
-    &_fresh {
-        background: url("../img/background/slider/fresh-slide.png") no-repeat;
-    }
-
-    &_clean-code {
-        background: url("../img/background/slider/clean-code-slide.png") no-repeat;
-    }
-
-    &_creative {
-        background: url("../img/background/slider/creative-slide.png") no-repeat;
-    }
-
-    &_content-block {
-        background: url("../img/background/slider/content-block-slide.png") no-repeat;
-    }
-
-    &_root {
-        height: 880px;
-    }
-
-    .about-us {
-        cursor: default;
-        height: 350px;
-        width: 1000px;
-        padding: 240px 0 210px;
-        margin: auto;
-
-        &__title {
-            @include font-style(900, 73px, "Montserrat");
-
-            letter-spacing: 4.7px;
-            margin: 0;
+        &:hover {
+            color: #2290ff;
         }
 
-        &__description {
-            color: #a3b1bf;
-        }
-
-        &__button {
-            margin-top: 58px;
-            width: 295px;
-            height: 65px;
-        }
-    }
-
-    .fresh {
-        height: 350px;
-        width: 1180px;
-        cursor: default;
-        padding: 240px 0 210px;
-        margin: auto;
-
-        &__title {
-            @include font-style(900, 73px, "Montserrat");
-
-            letter-spacing: 4.7px;
-            max-width: 800px;
-            text-align: right;
-            line-height: 90px;
-        }
-
-        &__description {
-            max-width: 800px;
-            text-align: right;
+        &.active {
             color: #ffffff;
-            margin: 0;
-        }
-
-        &__button {
-            margin-top: 58px;
-            width: 295px;
-            height: 65px;
-            margin-left: 200px;
+            background-color: #2290ff;
         }
     }
 
-    .clean-code {
-        height: 350px;
-        width: 1155px;
-        cursor: default;
-        padding: 200px 0 210px;
-        margin: auto;
+    .amenities-info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 400px;
 
-        &__title {
-            @include font-style(900, 73px, "Montserrat");
+        &-image {
+            max-height: 600px;
+            max-width: 100%;
+            display: flex;
 
-            letter-spacing: 4.7px;
-            text-align: left;
-            line-height: 85px;
-            padding: 20px 30px;
-            margin-right: 200px;
-            background-color: #506a85;;
-        }
-
-        &__description {
-            max-width: 700px;
-            text-align: left;
-            color: #506a85;
-            margin: 20px 0 0;
-        }
-
-        &__button {
-            margin-top: 58px;
-            width: 295px;
-            height: 65px;
-            margin-right: 200px;
-        }
-    }
-
-    .creative {
-        height: 350px;
-        width: 1180px;
-        cursor: default;
-        padding: 85px 0 210px;
-        margin: auto;
-
-        &__title {
-            @include font-style(900, 73px, "Montserrat");
-
-            letter-spacing: 4.7px;
-            text-align: right;
-            line-height: 85px;
-            padding: 20px 30px;
-            background-color: #506a85;
-        }
-
-        &__description {
-            max-width: 800px;
-            text-align: right;
-            color: #ffffff;
-            margin: 20px 0 0;
-        }
-
-        &__button {
-            margin-top: 58px;
-            width: 295px;
-            height: 65px;
-            margin-left: 200px;
-        }
-    }
-
-    .content-block {
-        cursor: default;
-        height: 350px;
-        width: 1000px;
-        padding: 78px 0 210px;
-        margin: auto;
-
-        &__title {
-            @include font-style(900, 73px, "Montserrat");
-
-            letter-spacing: 4.7px;
-            margin: 0;
-        }
-
-        &__description {
-            color: #a3b1bf;
-            max-width: 750px;
-        }
-
-        &__button {
-            margin-top: 58px;
-            width: 295px;
-            height: 65px;
-        }
-    }
-}
-
-.advantages-info {
-    padding: 117px 0 130px;
-
-    &__description {
-        margin: 20px 190px 0;
-        letter-spacing: -0.2px;
-    }
-
-    &_items {
-        @include set-image-adventure-item("heart");
-        @include set-image-adventure-item("lamp");
-        @include set-image-adventure-item("star");
-        @include set-image-adventure-item("technology");
-        @include set-image-adventure-item("social");
-        @include set-image-adventure-item("marketing");
-
-        margin: 65px 15px 0;
-
-        .item {
-            &__logo {
-                @include square(70px);
+            img {
+                margin-left: auto;
+                display: flex;
+                max-height: 600px;
+                max-width: 100%;
             }
+        }
 
-            &-characteristic {
-                width: calc(100% - 110px);
-                margin: 0 10px 0 30px;
+        &-content {
+            margin-left: 50px;
 
-                &__title {
-                    @include font-style(700, 26px, "Montserrat");
+            .list {
+                list-style-type: circle;
 
-                    color: #506a85;
-                }
+                li {
+                    @include font-style(300, 21px, "SF UI Display");
 
-                &__description {
-                    @include font-style(400, 16px, "Roboto");
-
-                    color: #73879c;
-                    margin: 20px 0 0;
+                    color: #222328;
+                    line-height: 21px;
+                    margin: 0 0 20px;
                 }
             }
         }
     }
-
-    &_item {
-        margin-bottom: 40px;
-    }
-
-    &__button {
-        width: 295px;
-    }
 }
 
-.example-work-info {
-    padding: 120px 0 140px;
+.about-section {
+    margin: 100px auto;
 
-    .items {
-        &_big {
-            margin: 75px 0 0;
+    .about-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 1200px;
+        margin: auto;
+        padding-top: 80px;
+        background-image: url("../img/about/map.svg");
+        background-repeat: no-repeat;
 
-            &__item {
-                border-radius: 5px;
+        > div {
+            max-width: 500px;
+        }
+
+        .about-container {
+            .description {
+                @include font-style(300, 18px, "SF UI Display");
+
+                color: #4F5362;
+                line-height: 31px;
+                margin: 30px 0 38px;
+            }
+        }
+
+        .about-form {
+            max-width: 500px;
+
+            .line {
+                display: flex;
+                margin-bottom: 15px;
             }
 
-            .item {
-                background-color: #ffffff;
-                padding: 25px 0;
-                border-bottom: 2px solid #e6e9ed;
-                margin: 0 15px;
+            .field {
+                width: calc(100% / 2 - 10px);
 
-                &__logo {
-                    width: calc(100% - 30px);
+                label {
+                    @include font-style(500, 12px, "Roboto");
+
+                    color: #A8ACB9;
+                    line-height: 12px;
+                    width: 100%;
                     margin-left: 15px;
                 }
 
-                &__title {
-                    @include font-style(700, 20px, "Montserrat");
+                input {
+                    @include font-style(300, 16px, "SF UI Display");
 
-                    color: #506a85;
-                    text-align: center;
-                    letter-spacing: 0.3px;
-                }
+                    color: #2290FF;
+                    line-height: 21px;
+                    background-color: #F9FBFF;
+                    border-radius: 29px;
+                    height: 58px;
+                    width: 100%;
+                    border: none;
+                    padding: 10px 25px;
 
-                &__author {
-                    @include font-style(400, 14px, "Roboto");
-
-                    color: #73879c;
-                    margin: 6px 0 0;
-                    text-align: center;
-                }
-            }
-        }
-
-        &_small {
-            margin-top: 80px;
-
-            .items_image {
-                @include set-image-works-item("business-card");
-                @include set-image-works-item("plate");
-                @include set-image-works-item("sticker");
-                @include set-image-works-item("signwall");
-
-                > div {
-                    background-size: 90%;
-                    background-position: center;
-
-                    > div {
-                        height: 185px;
-                        background-size: calc(100% - 30px);
-                        background-position-x: center;
+                    &:focus {
+                        outline: none;
                     }
                 }
+
+                &:first-child {
+                    margin: 0 auto 0 0;
+                }
+
+                &:last-child {
+                    margin: 0 0 0 auto;
+                }
             }
+
+            textarea {
+                @include font-style(300, 16px, "SF UI Display");
+
+                color: #2290FF;
+                line-height: 21px;
+                background-color: #F9FBFF;
+                border-radius: 10px;
+                resize: none;
+                width: 100%;
+                height: 72px;
+                border: none;
+                padding: 10px 25px;
+                margin-bottom: 30px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .button {
+                min-width: 230px;
+            }
+        }
+    }
+
+    .about-contacts {
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin: 150px auto 0 auto;
+
+        &__item {
+            @include font-style(300, 18px, "SF UI Display");
+
+            color: #4F5362;
+            line-height: 21px;
+            margin: 0 30px;
+
+            @include setSocialNetworksIcon("phone");
+            @include setSocialNetworksIcon("whatsapp");
+            @include setSocialNetworksIcon("mail");
+            @include setSocialNetworksIcon("dribbble");
         }
     }
 }
 
-.cooperation-info {
-    padding: 115px 130px 130px;
-
-    &__button {
-        width: 150px;
-        margin-top: 38px;
-        padding: 10px;
+.footer-section {
+    > div {
+        width: 780px;
+        height: 220px;
+        margin: 200px auto 100px;
     }
-}
 
-.site-map {
-    padding: 70px 15px 75px;
-
-    &_block {
-        padding: 0 10px;
+    &__logo {
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
     }
 
     &__description {
-        @include font-style(400, 14px, "Roboto");
+        @include font-style(300, 16px, "SF UI Display");
 
-        color: #a3b1bf;
-        line-height: 22px;
+        color: #818992;
+        line-height: 24px;
+        text-align: center;
+        margin: 30px 0;
     }
 
-    .who-we-are_info {
-        &__logo {
-            background: url("../img/logo/name-logo-light.svg") no-repeat;
-            height: 50px;
-            width: 180px;
-            background-size: 100%;
-        }
+    &-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin: auto;
 
-        &__description {
-            margin-top: 10px;
-        }
-    }
+        a {
+            @include font-style(400, 14px, "SF UI Display");
 
-    .works-info {
-        @include set-image-works-item("business-card");
-        @include set-image-works-item("plate");
-        @include set-image-works-item("sticker");
-        @include set-image-works-item("signwall");
-
-        > div {
-            height: 85px;
-            margin-top: 5px;
-            background-size: 95% 85px;
-            background-position: center left;
-        }
-    }
-
-    .get-in-touch-info {
-        &__description {
-            margin: -6px 0 0;
-        }
-
-        .touch_contacts {
-            margin-top: 10px;
-
-            @include set-image-touch-item("map");
-            @include set-image-touch-item("phone");
-            @include set-image-touch-item("email");
-        }
-    }
-
-    .updates {
-        &__description {
-            margin: -6px 0;
-        }
-
-        .email_form {
-            margin-top: 20px;
-            height: 42px;
-            position: relative;
-
-            &__input {
-                background-color: #4e5c6c;
-                color: #a3b1bf;
-                border: none;
-                padding-right: 100px;
-            }
-        }
-
-        .subscribe-update_button {
-            @include font-style(600, 14px, "Roboto");
-
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            width: 88px;
-            height: 30px;
-            padding: 4px;
-        }
-    }
-}
-
-.footer {
-    padding: 30px 15px;
-
-    &__copyright {
-        @include font-style(400, 14px, "Roboto");
-
-        color: #707e8c;
-        float: left;
-    }
-
-    &__map {
-        @include font-style(400, 14px, "Roboto");
-
-        float: right;
-
-        &_item {
-            color: #707e8c !important;
-            margin-left: 10px;
-            cursor: pointer;
+            color: #2D3136;
+            line-height: 24px;
             display: block;
-            text-decoration: none !important;
+            margin: 0 20px;
 
             &:hover {
-                color: #00bc9c !important;
-                transition: 0.25s linear;
+                text-decoration: none;
             }
         }
+    }
 
-        .inactive {
-            cursor: default !important;
-            color: #707e8c !important;
+    &__copyright {
+        @include font-style(300, 18px, "SF UI Display");
+
+        color: #2D3136;
+        line-height: 24px;
+        margin: 30px auto 0;
+        width: 300px;
+
+        img {
+            @include square(20px);
         }
     }
 }
 
-.toggler-example {
-    padding: 10px 15px;
-
-    &__hamburger {
-        background-image: url("../img/background/hamburger_menu.png");
-        background-repeat: no-repeat;
-        height: 20px;
-        width: 24px;
-    }
-}
-
-@media (max-width: 1500px) {
-    .slider-container {
-        background-size: 100% !important;
-        height: 550px;
-
-        .about-us {
-            padding: 190px 0 0;
-            width: calc(100% - 300px);
-
-            &__title {
-                @include font-style(900, 50px, "Montserrat");
-
-                line-height: 70px;
-            }
-
-            &__description {
-                font-size: 20px;
-            }
-
-            &__button {
-                margin-top: 35px;
-            }
-        }
-
-        .fresh {
-            padding: 100px 0 0;
-            width: calc(100% - 300px);
-
-            &__title {
-                @include font-style(900, 50px, "Montserrat");
-
-                line-height: 70px;
-            }
-
-            &__description {
-                font-size: 20px;
-            }
-
-            &__button {
-                margin-top: 35px;
-            }
-        }
-
-        .clean-code {
-            padding: 80px 0 0;
-            width: calc(100% - 300px);
-
-            &__title {
-                @include font-style(900, 50px, "Montserrat");
-
-                line-height: 60px;
-                margin-right: 150px;
-            }
-
-            &__description {
-                font-size: 20px;
-            }
-
-            &__button {
-                margin-top: 35px;
-            }
-        }
-
-        .creative {
-            padding: 70px 0 0;
-            width: calc(100% - 300px);
-
-            &__title {
-                @include font-style(900, 50px, "Montserrat");
-
-                line-height: 70px;
-            }
-
-            &__description {
-                font-size: 20px;
-            }
-
-            &__button {
-                margin-top: 35px;
-            }
-        }
-
-        .content-block {
-            padding: 140px 0 0;
-            width: calc(100% - 300px);
-
-            &__title {
-                @include font-style(900, 50px, "Montserrat");
-
-                line-height: 70px;
-            }
-
-            &__description {
-                font-size: 20px;
-            }
-
-            &__button {
-                margin-top: 35px;
-            }
+@media (max-width: 1600px) {
+    .main-section {
+        &-content {
+            grid-template-columns: 3fr 2fr;
         }
     }
 }
 
-@media (max-width: 1200px) {
-    .slider-container {
-        background-size: 120% !important;
-        height: 530px;
-
-        .about-us {
-            padding: 120px 0 0;
-            width: calc(100% - 250px);
-        }
-
-        .clean-code {
-            padding: 50px 0 0;
-            width: calc(100% - 250px);
-        }
-
-        .content-block {
-            padding: 120px 0 0;
-        }
-    }
-
-    .advantages-info {
-        padding: 50px 20px;
-    }
-
-    .example-work-info {
-        padding: 50px 20px;
-
-        .items_big {
-            margin: 30px 0 0;
-
-            .item {
-                &__logo {
-                    &:first-child {
-                        margin-left: 15px;
-                    }
-                }
-
-                &__title {
-                    @include font-style(700, 16px, "Montserrat");
-                }
-            }
-        }
-
-        .items_small {
-            margin-top: 30px;
-
-            .items_navigation {
-                margin-top: 10px;
-            }
-        }
-    }
-
-    .cooperation-info {
-        padding: 50px 20px;
-    }
-
-    .site-map {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .slider-container {
-        background-size: 120% !important;
-        height: 500px;
-
-        .about-us {
-            padding: 120px 0 0;
-        }
-
-        .fresh {
-            padding: 70px 0 0;
-        }
-
-        .creative {
-            padding: 45px 0 0;
-
-            &__title {
-                @include font-style(900, 40px, "Montserrat");
-
-                line-height: 50px;
-            }
-        }
-    }
-
-    .advantages-info {
-        &_item {
-            padding: 0 50px 40px;
-        }
-
-        &__description {
-            margin: 20px;
-        }
-    }
-
-    .example-work-info {
-        .item {
-
-            .items_navigation {
-                margin-top: 0;
-            }
-        }
-    }
-
-    .site-map {
-        &_block {
-            padding: 20px;
-        }
-
-        .works-info {
-            max-width: 260px;
+@media (max-width: 1400px) {
+    .about-section {
+        .about-info {
+            grid-template-columns: repeat(1, 1fr);
+            width: 600px;
 
             > div {
-                background-size: 124px 85px;
-                width: 130px;
+                margin: 50px auto;
             }
         }
-    }
-}
 
-@media (max-width: 992px) {
-    .slider-container {
-        .clean-code {
-            &__title {
-                @include font-style(900, 40px, "Montserrat");
-
-                line-height: 50px;
-            }
-        }
-    }
-
-    .nav-bar {
-        padding: 10px;
-        width: 100%;
-        border: none;
-
-        .menu {
-            margin: 40px 0 0;
-        }
-
-        &__logotype, &__search-field {
-            display: none;
-        }
-
-        &_desktop {
-            display: none;
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    .slider-container {
-        display: none;
-    }
-
-    .example-work-info {
-        .items_big {
-            &__item {
-                margin-bottom: 10px;
-
-                .item {
-                    &__title {
-                        @include font-style(700, 14px !important, "Montserrat");
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .example-work-info {
-        .items_image {
-            .item_card {
-                height: 170px;
-                background-size: 90%;
-            }
-        }
-    }
-
-    .site-map {
-        &_block {
-            padding: 20px;
-        }
-
-        .works-info {
-            max-width: 210px;
+        .about-contacts {
+            width: 100%;
+            flex-wrap: wrap;
 
             > div {
-                background-size: 100px 75px;
-                height: 75px;
-                width: 105px;
-            }
-        }
-    }
-
-    .footer {
-        &__copyright {
-            float: left;
-            width: 100%;
-        }
-
-        &__map {
-            margin: 10px 0 0 -10px;
-            float: left;
-            width: 100%;
-        }
-    }
-}
-
-@media (max-width: 640px) {
-    .example-work-info {
-        .item {
-            &__logo {
-                height: 300px !important;
+                margin: 0 20px;
             }
         }
     }

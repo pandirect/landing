@@ -1,81 +1,27 @@
-@mixin set-image-networks($type) {
-    .networks__item_#{$type} {
-        background-image: url("../img/background/social_network/icon_#{$type}.png");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-@mixin set-image-contacts-header($type) {
-    .contact-info__item_#{$type} {
-        &:before {
-            height: 20px;
-            width: 20px;
-            content: "";
-            display: block;
-            float: left;
-            position: relative;
-            margin: -2px 4px 0 0;
-            background-image: url("../img/background/tool_link/icon_#{$type}_dark.png");
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    }
-}
-
-@mixin set-image-adventure-item($type) {
-    .item__logo_#{$type} {
-        background-image: url("../img/background/info_column/icon_#{$type}.png");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-@mixin set-image-works-item($type) {
-    .item_#{$type} {
-        background-image: url("../img/works/#{$type}.png");
-        background-repeat: no-repeat;
-    }
-}
-
-@mixin set-slider-image($type) {
-    &_#{$type} {
-        background-image: url("../img/background/slider/#{$type}-slide.png");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-@mixin set-image-touch-item($type) {
-    .touch_contacts__#{$type} {
-        &:before {
-            height: 20px;
-            width: 20px;
-            content: "";
-            display: block;
-            float: left;
-            position: relative;
-            margin: 1px 4px 0 0;
-            background-image: url("../img/background/tool_link/icon_#{$type}_light.png");
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    }
-}
-
 @mixin square($size) {
     height: $size;
     width: $size;
-}
-
-@mixin set-image($url, $position: center) {
-    background-image: url($url);
-    background-position: $position;
-    background-repeat: no-repeat;
 }
 
 @mixin font-style($weight, $size, $family) {
     font-family: $family;
     font-size: $size;
     font-weight: $weight;
+}
+
+@mixin setSocialNetworksIcon($icon) {
+    &[data-type=#{$icon}] {
+        &:before {
+            @include square(21px);
+
+            content: "";
+            display: block;
+            float: left;
+            background-image: url("../img/about/#{$icon}.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 21px 21px;
+            margin-right: 10px;
+        }
+    }
 }

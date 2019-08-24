@@ -1,11 +1,12 @@
 {
-  "name": "library",
+  "name": "pandirect-landing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "chart.js": "^2.7.3",
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2"
   },
   "devDependencies": {
