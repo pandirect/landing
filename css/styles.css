@@ -241,10 +241,10 @@ h2 {
           margin-left: 1506px; }
       .main-section-background .shapes-1 {
         margin-left: 0;
-        animation: shapes-1 150s infinite; }
+        animation: shapes-1 100s infinite; }
       .main-section-background .shapes-2 {
         margin-left: 1600px;
-        animation: shapes-2 150s infinite; }
+        animation: shapes-2 100s infinite; }
 
 .amenities-section {
   margin: 80px auto; }
@@ -313,7 +313,7 @@ h2 {
 
 .cases-section > div {
   margin: 150px auto 80px;
-  width: 1150px; }
+  width: 1200px; }
 
 .cases-section__title {
   font-family: "SF UI Display";
@@ -372,7 +372,8 @@ h2 {
         bottom: 0;
         left: 0;
         height: 58px;
-        width: 165px; }
+        width: 165px;
+        padding: 15px; }
         .cases-section-items .case-item-substrate .button:hover {
           box-shadow: 0 4px 16px 0 rgba(23, 23, 55, 0.5); }
       .cases-section-items .case-item-substrate .background {
@@ -382,7 +383,8 @@ h2 {
         position: absolute;
         top: 0;
         z-index: 1;
-        opacity: 0.75; }
+        opacity: 0.75;
+        border-radius: 5px; }
       .cases-section-items .case-item-substrate:hover {
         opacity: 1; }
 
@@ -397,7 +399,7 @@ h2 {
     background-image: url("../img/about/map.svg");
     background-repeat: no-repeat; }
     .about-section .about-info > div {
-      max-width: 500px; }
+      max-width: 550px; }
     .about-section .about-info .about-container .description {
       font-family: "SF UI Display";
       font-size: 18px;

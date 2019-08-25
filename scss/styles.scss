@@ -294,12 +294,12 @@ h2 {
 
             &-1 {
                 margin-left: 0;
-                animation: shapes-1 150s infinite;
+                animation: shapes-1 100s infinite;
             }
 
             &-2 {
                 margin-left: 1600px;
-                animation: shapes-2 150s infinite;
+                animation: shapes-2 100s infinite;
             }
         }
     }
@@ -397,7 +397,7 @@ h2 {
 .cases-section {
     > div {
         margin: 150px auto 80px;
-        width: 1150px;
+        width: 1200px;
     }
 
     &__title {
@@ -472,6 +472,7 @@ h2 {
                     left: 0;
                     height: 58px;
                     width: 165px;
+                    padding: 15px;
 
                     &:hover {
                         box-shadow: 0 4px 16px 0 rgba(23, 23, 55, 0.5);
@@ -486,6 +487,7 @@ h2 {
                     top: 0;
                     z-index: 1;
                     opacity: 0.75;
+                    border-radius: 5px;
                 }
 
                 &:hover {
@@ -509,7 +511,7 @@ h2 {
         background-repeat: no-repeat;
 
         > div {
-            max-width: 500px;
+            max-width: 550px;
         }
 
         .about-container {
