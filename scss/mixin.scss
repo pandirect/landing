@@ -3,10 +3,9 @@
     width: $size;
 }
 
-@mixin font-style($weight, $size, $family) {
+@mixin font-style($size, $family) {
     font-family: $family;
     font-size: $size;
-    font-weight: $weight;
 }
 
 @mixin setSocialNetworksIcon($icon) {

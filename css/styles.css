@@ -1,38 +1,62 @@
 @font-face {
   font-family: "SFDisplay-Thin";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Thin.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Thin.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-UltraLight";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Ultralight.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Ultralight.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Light";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Light.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Light.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Regular";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Regular.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Medium";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Medium.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Medium.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Semibold";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Semibold.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Semibold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Bold";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Bold.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Bold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Heavy";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Heavy.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Heavy.ttf") format("truetype"); }
 
 @font-face {
   font-family: "SFDisplay-Black";
-  src: local("SFDisplay"), url("fonts/SF_Pro_Display/SFProDisplay-Black.ttf") format("truetype"); }
+  src: url("fonts/SF_Pro_Display/SFProDisplay-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("fonts/Roboto/Roboto-Thin.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/Roboto/Roboto-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("fonts/Roboto/Roboto-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto/Roboto-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("fonts/Roboto/Roboto-Black.ttf") format("truetype"); }
 
 @keyframes shapes-1 {
   from {
@@ -55,23 +79,20 @@ body:after {
   display: none; }
 
 h1 {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Bold";
   font-size: 40px;
-  font-weight: 700;
   color: #ffffff;
   line-height: 50px; }
 
 h2 {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Medium";
   font-size: 42px;
-  font-weight: 500;
   color: #222328;
   line-height: 45px; }
 
 .button {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Medium";
   font-size: 18px;
-  font-weight: 500;
   line-height: 24px;
   text-align: center;
   padding: 15px 30px;
@@ -111,16 +132,14 @@ h2 {
   width: 600px;
   margin: 100px auto auto; }
   .stub-wrap__title {
-    font-family: "SF UI Display";
+    font-family: "SFDisplay-Light";
     font-size: 32px;
-    font-weight: 300;
     line-height: 32px;
     color: #000000;
     margin-bottom: 50px; }
   .stub-wrap__description {
-    font-family: "SF UI Display";
+    font-family: "SFDisplay-Light";
     font-size: 18px;
-    font-weight: 300;
     line-height: 27px;
     color: #4F5362; }
 
@@ -142,9 +161,8 @@ h2 {
     .main-menu .navbar .navigate-item {
       width: 100%; }
       .main-menu .navbar .navigate-item .nav-link {
-        font-family: "Roboto";
+        font-family: "Roboto-Regular";
         font-size: 15px;
-        font-weight: 400;
         color: #919191;
         border-left: 6px solid #ffffff;
         display: block;
@@ -154,9 +172,8 @@ h2 {
         .main-menu .navbar .navigate-item .nav-link:hover {
           color: #2290FF; }
         .main-menu .navbar .navigate-item .nav-link.active {
-          font-family: "Roboto";
+          font-family: "Roboto-Bold";
           font-size: 15px;
-          font-weight: 700;
           border-left-color: #2290FF;
           color: #2290FF; }
 
@@ -182,17 +199,15 @@ h2 {
       width: 600px;
       margin: auto; }
       .main-section-content .main-description .pre-title {
-        font-family: "SF UI Display";
+        font-family: "SFDisplay-Light";
         font-size: 16px;
-        font-weight: 300;
         color: #ffffff;
         line-height: 24px; }
       .main-section-content .main-description .title {
         margin: 10px 0 15px; }
       .main-section-content .main-description .description {
-        font-family: "SF UI Display";
+        font-family: "SFDisplay-Light";
         font-size: 15px;
-        font-weight: 300;
         color: #ffffff;
         line-height: 24px; }
       .main-section-content .main-description .button {
@@ -284,9 +299,8 @@ h2 {
       width: 100%;
       max-width: 100%; }
   .amenities-section .nav-link {
-    font-family: "SF UI Display";
+    font-family: "SFDisplay-Medium";
     font-size: 18px;
-    font-weight: 500;
     color: #4F5362;
     background-color: #ffffff;
     line-height: 18px;
@@ -319,9 +333,8 @@ h2 {
     .amenities-section .amenities-info-content {
       max-width: 90%; }
       .amenities-section .amenities-info-content .description {
-        font-family: "SF UI Display";
+        font-family: "SFDisplay-Light";
         font-size: 18px;
-        font-weight: 300;
         color: #4F5362;
         line-height: 27px;
         margin-bottom: 30px; }
@@ -329,9 +342,8 @@ h2 {
         list-style-type: circle;
         margin-left: 30px; }
         .amenities-section .amenities-info-content .list li {
-          font-family: "SF UI Display";
+          font-family: "SFDisplay-Light";
           font-size: 21px;
-          font-weight: 300;
           color: #222328;
           line-height: 21px;
           margin: 0 0 20px; }
@@ -341,9 +353,8 @@ h2 {
   width: 1200px; }
 
 .cases-section__title {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Light";
   font-size: 34px;
-  font-weight: 300;
   color: #222328;
   line-height: 36px;
   margin-bottom: 40px; }
@@ -369,9 +380,8 @@ h2 {
       height: 180px;
       border-radius: 5px; }
     .cases-section-items .case-item__title {
-      font-family: "SF UI Display";
+      font-family: "SFDisplay-Light";
       font-size: 16px;
-      font-weight: 300;
       color: #222328;
       line-height: 24px;
       text-align: center;
@@ -429,9 +439,8 @@ h2 {
     .about-section .about-info > div {
       max-width: 550px; }
     .about-section .about-info .about-container .description {
-      font-family: "SF UI Display";
+      font-family: "SFDisplay-Light";
       font-size: 18px;
-      font-weight: 300;
       color: #4F5362;
       line-height: 31px;
       margin: 30px 0 38px; }
@@ -447,15 +456,13 @@ h2 {
         .about-section .about-info .about-form .field label {
           font-family: "Roboto";
           font-size: 12px;
-          font-weight: 500;
           color: #A8ACB9;
           line-height: 12px;
           width: 100%;
           margin-left: 15px; }
         .about-section .about-info .about-form .field input {
-          font-family: "SF UI Display";
+          font-family: "SFDisplay-Light";
           font-size: 16px;
-          font-weight: 300;
           color: #2290FF;
           line-height: 21px;
           background-color: #F9FBFF;
@@ -471,9 +478,8 @@ h2 {
         .about-section .about-info .about-form .field:last-child {
           margin: 0 0 0 auto; }
       .about-section .about-info .about-form textarea {
-        font-family: "SF UI Display";
+        font-family: "SFDisplay-Light";
         font-size: 16px;
-        font-weight: 300;
         color: #2290FF;
         line-height: 21px;
         background-color: #F9FBFF;
@@ -494,9 +500,8 @@ h2 {
     justify-content: center;
     margin: 150px auto 0 auto; }
     .about-section .about-contacts__item {
-      font-family: "SF UI Display";
+      font-family: "SFDisplay-Light";
       font-size: 18px;
-      font-weight: 300;
       color: #4F5362;
       line-height: 21px;
       margin: 0 30px; }
@@ -556,9 +561,8 @@ h2 {
   margin: 0 auto; }
 
 .footer-section__description {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Light";
   font-size: 16px;
-  font-weight: 300;
   color: #818992;
   line-height: 24px;
   text-align: center;
@@ -570,9 +574,8 @@ h2 {
   justify-content: center;
   margin: auto; }
   .footer-section-list a {
-    font-family: "SF UI Display";
+    font-family: "SFDisplay-Reqular";
     font-size: 14px;
-    font-weight: 400;
     color: #2D3136;
     line-height: 24px;
     display: block;
@@ -581,9 +584,8 @@ h2 {
       text-decoration: none; }
 
 .footer-section__copyright {
-  font-family: "SF UI Display";
+  font-family: "SFDisplay-Light";
   font-size: 18px;
-  font-weight: 300;
   color: #2D3136;
   line-height: 24px;
   margin: 30px auto 0;

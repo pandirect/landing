@@ -26,21 +26,21 @@ body {
 }
 
 h1 {
-    @include font-style(700, 40px, "SF UI Display");
+    @include font-style(40px, "SFDisplay-Bold");
 
     color: #ffffff;
     line-height: 50px;
 }
 
 h2 {
-    @include font-style(500, 42px, "SF UI Display");
+    @include font-style(42px, "SFDisplay-Medium");
 
     color: #222328;
     line-height: 45px;
 }
 
 .button {
-    @include font-style(500, 18px, "SF UI Display");
+    @include font-style(18px, "SFDisplay-Medium");
 
     line-height: 24px;
     text-align: center;
@@ -100,7 +100,7 @@ h2 {
     margin: 100px auto auto;
 
     &__title {
-        @include font-style(300, 32px, "SF UI Display");
+        @include font-style(32px, "SFDisplay-Light");
 
         line-height: 32px;
         color: #000000;
@@ -108,7 +108,7 @@ h2 {
     }
 
     &__description {
-        @include font-style(300, 18px, "SF UI Display");
+        @include font-style(18px, "SFDisplay-Light");
 
         line-height: 27px;
         color: #4F5362;
@@ -139,7 +139,7 @@ h2 {
                 width: 100%;
 
                 .nav-link {
-                    @include font-style(400, 15px, "Roboto");
+                    @include font-style(15px, "Roboto-Regular");
 
                     color: #919191;
                     border-left: 6px solid #ffffff;
@@ -153,7 +153,7 @@ h2 {
                     }
 
                     &.active {
-                        @include font-style(700, 15px, "Roboto");
+                        @include font-style(15px, "Roboto-Bold");
 
                         border-left-color: #2290FF;
                         color: #2290FF;
@@ -192,7 +192,7 @@ h2 {
             margin: auto;
 
             .pre-title {
-                @include font-style(300, 16px, "SF UI Display");
+                @include font-style(16px, "SFDisplay-Light");
 
                 color: #ffffff;
                 line-height: 24px;
@@ -203,7 +203,7 @@ h2 {
             }
 
             .description {
-                @include font-style(300, 15px, "SF UI Display");
+                @include font-style(15px, "SFDisplay-Light");
 
                 color: #ffffff;
                 line-height: 24px;
@@ -355,7 +355,7 @@ h2 {
     }
 
     .nav-link {
-        @include font-style(500, 18px, "SF UI Display");
+        @include font-style(18px, "SFDisplay-Medium");
 
         color: #4F5362;
         background-color: #ffffff;
@@ -401,7 +401,7 @@ h2 {
             max-width: 90%;
 
             .description {
-                @include font-style(300, 18px, "SF UI Display");
+                @include font-style(18px, "SFDisplay-Light");
 
                 color: #4F5362;
                 line-height: 27px;
@@ -413,7 +413,7 @@ h2 {
                 margin-left: 30px;
 
                 li {
-                    @include font-style(300, 21px, "SF UI Display");
+                    @include font-style(21px, "SFDisplay-Light");
 
                     color: #222328;
                     line-height: 21px;
@@ -431,7 +431,7 @@ h2 {
     }
 
     &__title {
-        @include font-style(300, 34px, "SF UI Display");
+        @include font-style(34px, "SFDisplay-Light");
 
         color: #222328;
         line-height: 36px;
@@ -471,7 +471,7 @@ h2 {
             }
 
             &__title {
-                @include font-style(300, 16px, "SF UI Display");
+                @include font-style(16px, "SFDisplay-Light");
 
                 color: #222328;
                 line-height: 24px;
@@ -550,7 +550,7 @@ h2 {
 
         .about-container {
             .description {
-                @include font-style(300, 18px, "SF UI Display");
+                @include font-style(18px, "SFDisplay-Light");
 
                 color: #4F5362;
                 line-height: 31px;
@@ -574,7 +574,7 @@ h2 {
                 width: calc(100% / 2 - 10px);
 
                 label {
-                    @include font-style(500, 12px, "Roboto");
+                    @include font-style(12px, "Roboto");
 
                     color: #A8ACB9;
                     line-height: 12px;
@@ -583,7 +583,7 @@ h2 {
                 }
 
                 input {
-                    @include font-style(300, 16px, "SF UI Display");
+                    @include font-style(16px, "SFDisplay-Light");
 
                     color: #2290FF;
                     line-height: 21px;
@@ -609,7 +609,7 @@ h2 {
             }
 
             textarea {
-                @include font-style(300, 16px, "SF UI Display");
+                @include font-style(16px, "SFDisplay-Light");
 
                 color: #2290FF;
                 line-height: 21px;
@@ -640,7 +640,7 @@ h2 {
         margin: 150px auto 0 auto;
 
         &__item {
-            @include font-style(300, 18px, "SF UI Display");
+            @include font-style(18px, "SFDisplay-Light");
 
             color: #4F5362;
             line-height: 21px;
@@ -668,7 +668,7 @@ h2 {
     }
 
     &__description {
-        @include font-style(300, 16px, "SF UI Display");
+        @include font-style(16px, "SFDisplay-Light");
 
         color: #818992;
         line-height: 24px;
@@ -683,7 +683,7 @@ h2 {
         margin: auto;
 
         a {
-            @include font-style(400, 14px, "SF UI Display");
+            @include font-style(14px, "SFDisplay-Reqular");
 
             color: #2D3136;
             line-height: 24px;
@@ -697,7 +697,7 @@ h2 {
     }
 
     &__copyright {
-        @include font-style(300, 18px, "SF UI Display");
+        @include font-style(18px, "SFDisplay-Light");
 
         color: #2D3136;
         line-height: 24px;
