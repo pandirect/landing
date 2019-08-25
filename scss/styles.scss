@@ -54,6 +54,10 @@ h2 {
         outline: none;
     }
 
+    &:hover {
+        text-decoration: none;
+    }
+
     &-blue {
         color: #ffffff;
         background-color: #2290ff;
@@ -89,6 +93,26 @@ h2 {
 .wrap {
     display: flex;
     height: 100vh;
+}
+
+.stub-wrap {
+    width: 600px;
+    margin: 100px auto auto;
+
+    &__title {
+        @include font-style(300, 32px, "SF UI Display");
+
+        line-height: 32px;
+        color: #000000;
+        margin-bottom: 50px;
+    }
+
+    &__description {
+        @include font-style(300, 18px, "SF UI Display");
+
+        line-height: 27px;
+        color: #4F5362;
+    }
 }
 
 .main-menu {
@@ -156,6 +180,7 @@ h2 {
         position: absolute;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        z-index: 2;
 
         > div > div {
             display: flex;
@@ -206,6 +231,11 @@ h2 {
     &-background {
         width: 100%;
         overflow: hidden;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
 
         .background {
             width: 100%;
@@ -496,6 +526,10 @@ h2 {
             }
         }
     }
+
+    &__button {
+        width: 170px;
+    }
 }
 
 .about-section {
@@ -521,6 +555,10 @@ h2 {
                 color: #4F5362;
                 line-height: 31px;
                 margin: 30px 0 38px;
+            }
+
+            .button {
+                width: 290px;
             }
         }
 

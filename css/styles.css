@@ -81,6 +81,8 @@ h2 {
   transition: 0.25s; }
   .button:focus {
     outline: none; }
+  .button:hover {
+    text-decoration: none; }
   .button-blue {
     color: #ffffff;
     background-color: #2290ff;
@@ -104,6 +106,23 @@ h2 {
 .wrap {
   display: flex;
   height: 100vh; }
+
+.stub-wrap {
+  width: 600px;
+  margin: 100px auto auto; }
+  .stub-wrap__title {
+    font-family: "SF UI Display";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 50px; }
+  .stub-wrap__description {
+    font-family: "SF UI Display";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    color: #4F5362; }
 
 .main-menu {
   width: 240px;
@@ -154,7 +173,8 @@ h2 {
     width: 100%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 2; }
     .main-section-content > div > div {
       display: flex;
       flex-direction: column; }
@@ -186,7 +206,12 @@ h2 {
           width: 100%; }
   .main-section-background {
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; }
     .main-section-background .background {
       width: 100%;
       z-index: 0; }
@@ -388,6 +413,9 @@ h2 {
       .cases-section-items .case-item-substrate:hover {
         opacity: 1; }
 
+.cases-section__button {
+  width: 170px; }
+
 .about-section {
   margin: 100px auto; }
   .about-section .about-info {
@@ -407,6 +435,8 @@ h2 {
       color: #4F5362;
       line-height: 31px;
       margin: 30px 0 38px; }
+    .about-section .about-info .about-container .button {
+      width: 290px; }
     .about-section .about-info .about-form {
       max-width: 500px; }
       .about-section .about-info .about-form .line {
