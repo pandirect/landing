@@ -1,0 +1,11 @@
+@keyframes shapes-1 {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -1600px; } }
+
+@keyframes shapes-2 {
+  from {
+    margin-left: 1600px; }
+  to {
+    margin-left: 0; } }
