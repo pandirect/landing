@@ -75,7 +75,7 @@ body, h1, h2, p, ul, li, label {
   padding: 0; }
 
 body:after {
-  content: url("../img/main/background.svg") url("../img/main/illustrate.svg") url("../img/main/one-circle.svg") url("../img/main/double-circle.svg") url("../img/main/triple-circle.svg") url("../img/main/triangle.svg") url("../img/amenities/cat1.jpg") url("../img/amenities/cat2.jpg") url("../img/amenities/cat4.jpg") url("../img/amenities/design.svg") url("../img/amenities/integration.svg");
+  content: url("../img/main/background.svg") url("../img/main/illustrate.svg") url("../img/main/one-circle.svg") url("../img/main/double-circle.svg") url("../img/main/triple-circle.svg") url("../img/main/triangle.svg") url("../img/amenities/analytics.svg") url("../img/amenities/develop.svg") url("../img/amenities/design.svg") url("../img/amenities/support.svg") url("../img/amenities/integration.svg") url("../img/cases/zagadaem-ru.webp") url("../img/cases/terin.webp");
   display: none; }
 
 h1 {
