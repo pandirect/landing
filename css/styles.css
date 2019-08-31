@@ -328,18 +328,24 @@ h2 {
   .amenities-section .amenities-info {
     width: 100%;
     display: grid;
-    grid-template-columns: auto 500px; }
+    grid-template-columns: auto 700px; }
     .amenities-section .amenities-info-image {
       height: 600px;
       max-width: 100%;
       display: flex; }
       .amenities-section .amenities-info-image img {
-        margin: auto;
+        margin: 0 150px 0 auto;
         display: flex;
         max-height: 600px;
         max-width: 100%; }
     .amenities-section .amenities-info-content {
       max-width: 90%; }
+      .amenities-section .amenities-info-content .title {
+        font-family: "SFDisplay-Light";
+        font-size: 36px;
+        color: #000000;
+        line-height: 42px;
+        margin-bottom: 30px; }
       .amenities-section .amenities-info-content .description {
         font-family: "SFDisplay-Light";
         font-size: 18px;

@@ -394,7 +394,7 @@ h2 {
     .amenities-info {
         width: 100%;
         display: grid;
-        grid-template-columns: auto 500px;
+        grid-template-columns: auto 700px;
 
         &-image {
             height: 600px;
@@ -402,7 +402,7 @@ h2 {
             display: flex;
 
             img {
-                margin: auto;
+                margin: 0 150px 0 auto;
                 display: flex;
                 max-height: 600px;
                 max-width: 100%;
@@ -411,6 +411,14 @@ h2 {
 
         &-content {
             max-width: 90%;
+
+            .title {
+                @include font-style(36px, "SFDisplay-Light");
+
+                color: #000000;
+                line-height: 42px;
+                margin-bottom: 30px;
+            }
 
             .description {
                 @include font-style(18px, "SFDisplay-Light");
