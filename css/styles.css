@@ -75,7 +75,7 @@ body, h1, h2, p, ul, li, label {
   padding: 0; }
 
 body:after {
-  content: url("../img/main/background.svg") url("../img/main/illustrate.svg") url("../img/main/one-circle.svg") url("../img/main/double-circle.svg") url("../img/main/triple-circle.svg") url("../img/main/triangle.svg") url("../img/amenities/analytics.svg") url("../img/amenities/develop.svg") url("../img/amenities/design.svg") url("../img/amenities/support.svg") url("../img/amenities/integration.svg") url("../img/cases/zagadaem-ru.webp") url("../img/cases/terin.webp");
+  content: url("../src/layouts/main/img/main/background.svg") url("../src/layouts/main/img/main/illustrate.svg") url("../src/layouts/main/img/main/one-circle.svg") url("../src/layouts/main/img/main/double-circle.svg") url("../src/layouts/main/img/main/triple-circle.svg") url("../src/layouts/main/img/main/triangle.svg") url("../src/layouts/main/img/amenities/analytics.svg") url("../src/layouts/main/img/amenities/develop.svg") url("../src/layouts/main/img/amenities/design.svg") url("../src/layouts/main/img/amenities/support.svg") url("../src/layouts/main/img/amenities/integration.svg") url("../src/layouts/main/img/cases/zagadaem-ru.webp") url("../src/layouts/main/img/cases/terin.webp");
   display: none; }
 
 h1 {
@@ -448,7 +448,7 @@ h2 {
     width: 1200px;
     margin: auto;
     padding-top: 80px;
-    background-image: url("../img/about/map.svg");
+    background-image: url("../src/layouts/main/img/about/map.svg");
     background-repeat: no-repeat; }
     .about-section .about-info > div {
       max-width: 550px; }
@@ -525,7 +525,7 @@ h2 {
         content: "";
         display: block;
         float: left;
-        background-image: url("../img/about/phone.svg");
+        background-image: url("../src/layouts/main/img/about/phone.svg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 21px 21px;
@@ -536,7 +536,7 @@ h2 {
         content: "";
         display: block;
         float: left;
-        background-image: url("../img/about/whatsapp.svg");
+        background-image: url("../src/layouts/main/img/about/whatsapp.svg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 21px 21px;
@@ -547,7 +547,7 @@ h2 {
         content: "";
         display: block;
         float: left;
-        background-image: url("../img/about/mail.svg");
+        background-image: url("../src/layouts/main/img/about/mail.svg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 21px 21px;
@@ -558,7 +558,7 @@ h2 {
         content: "";
         display: block;
         float: left;
-        background-image: url("../img/about/dribbble.svg");
+        background-image: url("../src/layouts/main/img/about/dribbble.svg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 21px 21px;
