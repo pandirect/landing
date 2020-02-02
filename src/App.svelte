@@ -1,10 +1,6 @@
 <script>
-    import Main from "./pages/Main.svelte";
+import Landing from "./pages/Landing.svelte";
 
 </script>
 
-<style>
-
-</style>
-
-<Main />
+<Landing />

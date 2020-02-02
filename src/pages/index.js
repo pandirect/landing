@@ -1,1 +1,1 @@
-import Main from './Main.svelte';
+import Main from './Landing.svelte';

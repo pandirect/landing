@@ -1,5 +1,5 @@
 <script>
-    const src = "img/main/illustrate.svg";
+    const src = "assets/main/illustrate.svg";
 </script>
 
 <style type="text/scss" lang="scss">
@@ -17,7 +17,7 @@
             <a class="button button-blue" href="/about.html">Подробнее о Компании</a>
         </div>
         <div class="about-form">
-            <form action="void0">
+            <form>
                 <div class="line">
                     <div class="field">
                         <label class="field__label">Как к Вам обращаться?</label>
