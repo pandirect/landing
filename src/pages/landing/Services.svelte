@@ -17,7 +17,7 @@
     <div class="services-container">
         <div class="service">
             <div class="service__image">
-                <img alt="{selectedService.group}" title="{selectedService.group}" />
+                <img alt="{selectedService.group}" title="{selectedService.group}" src="../assets/services/{selectedService.image}"/>
             </div>
             <div class="service__info">
                 <p class="service__title">{selectedService.title}</p>

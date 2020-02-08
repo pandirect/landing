@@ -8,7 +8,7 @@
     import FooterContent from "./base/FooterContent.svelte";
     import MainSection from "./landing/MainSection.svelte";
     import Services from "./landing/Services.svelte";
-    import BlogSection from "./landing/BlogSection.svelte";
+    import Articles from "./landing/Articles.svelte";
     import AboutSection from "./landing/AboutSection.svelte";
 </script>
 
@@ -24,7 +24,7 @@
     <Main>
 
         <Services/>
-        <BlogSection/>
+        <Articles/>
         <AboutSection/>
     </Main>
     <Footer>
