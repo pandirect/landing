@@ -14,10 +14,10 @@
         </p>
     </section>
     <section>
-        <ul class="nav main-menu-navigate navigate">
+        <ul>
             {#each links as {link, label}, index }
-                <li class="nav-item navigate-item">
-                    <a class="nav-link active" href="#{link}">{label}</a>
+                <li>
+                    <a href="#{link}">{label}</a>
                 </li>
             {/each}
         </ul>

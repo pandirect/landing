@@ -1,5 +1,4 @@
 <script>
-    const src = "assets/main/illustrate.svg";
     const articles = [
         {
             title: 'article name',
@@ -24,7 +23,7 @@
         {#each articles as article, index (index)}
             <div class="article">
                 <div class="article__substrate">
-                    <a class="button button-white" href="{article.url}">Подробнее</a>
+                    <a class="button button_white" href="{article.url}">Подробнее</a>
                     <div class="background"></div>
                 </div>
                 <img src="{article.image}" alt="" class="article__image" />

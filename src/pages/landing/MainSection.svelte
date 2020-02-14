@@ -27,41 +27,4 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="main-section-background">
-        <div class="shapes shapes-1">
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-1" />
-            <assets src="assets/main/double-circle.svg" alt="" title="" class="shape shape-2" />
-            <assets src="assets/main/triple-circle.svg" alt="" title="" class="shape shape-3" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-4" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-5" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-6" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-7" />
-            <assets src="assets/main/double-circle.svg" alt="" title="" class="shape shape-8" />
-            <assets src="assets/main/triple-circle.svg" alt="" title="" class="shape shape-9" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-10" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-11" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-12" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-13" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-14" />
-        </div>
-        <div class="shapes shapes-2">
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-1" />
-            <assets src="assets/main/double-circle.svg" alt="" title="" class="shape shape-2" />
-            <assets src="assets/main/triple-circle.svg" alt="" title="" class="shape shape-3" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-4" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-5" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-6" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-7" />
-            <assets src="assets/main/double-circle.svg" alt="" title="" class="shape shape-8" />
-            <assets src="assets/main/triple-circle.svg" alt="" title="" class="shape shape-9" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-10" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-11" />
-            <assets src="assets/main/triangle.svg" alt="" title="" class="shape shape-12" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-13" />
-            <assets src="assets/main/one-circle.svg" alt="" title="" class="shape shape-14" />
-        </div>
-        <assets src="assets/main/background.svg" alt="" title="" class="background lozad" />
-    </div>
-    -->
 </div>

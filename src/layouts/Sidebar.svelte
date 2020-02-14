@@ -5,11 +5,11 @@
 
 <div class="sidebar">
     <Logo/>
-    <nav id="navbar" class="navbar" data-target="#navbar">
-        <ul class="nav main-menu-navigate navigate">
+    <nav>
+        <ul>
             {#each links as {link, label}, index }
-                <li class="nav-item navigate-item">
-                    <a class="nav-link active" href="#{link}">{label}</a>
+                <li>
+                    <a href="#{link}">{label}</a>
                 </li>
             {/each}
         </ul>
