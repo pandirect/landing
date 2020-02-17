@@ -1,0 +1,27 @@
+// reset default styles
+@import '_reset';
+
+@import '_colors';
+
+// include utils
+@import 'utils';
+
+// include global styles
+body {
+    line-height: 1.5;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    li, a {
+        width: 100%;
+    }
+
+    a {
+        padding: .5rem 1rem;
+    }
+}

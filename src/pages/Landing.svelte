@@ -13,21 +13,25 @@
 </script>
 
 <style type="text/scss" lang="scss">
-
+.layout {
+    display: flex;
+}
 </style>
 
-<div>
+<div class="layout">
     <Sidebar links="{links}"/>
-    <Header>
-        <MainSection/>
-    </Header>
-    <Main>
+    <div>
+        <Header>
+            <MainSection/>
+        </Header>
+        <Main>
 
-        <Services/>
-        <Articles/>
-        <AboutSection/>
-    </Main>
-    <Footer>
-        <FooterContent links="{links}"/>
-    </Footer>
+            <Services/>
+            <Articles/>
+            <AboutSection/>
+        </Main>
+        <Footer>
+            <FooterContent links="{links}"/>
+        </Footer>
+    </div>
 </div>
