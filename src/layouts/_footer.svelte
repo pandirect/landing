@@ -1,5 +1,5 @@
 <script>
-    import Logo from "../components/logo/Logo.svelte";
+    import {Logo} from "../components";
 
     export let links;
 </script>

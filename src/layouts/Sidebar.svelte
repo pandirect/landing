@@ -1,5 +1,5 @@
 <script>
-    import Logo from '../components/logo/Logo.svelte';
+    import {Logo} from '../components';
     export let links;
 </script>
 
@@ -7,17 +7,11 @@
 $width: 240px;
 
 .sidebar {
-    position: fixed;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: $width;
+    min-width: $width;
     flex-direction: column;
-
-    &-container {
-        display: flex;
-        width: $width;
-        min-width: $width;
-    }
 
     &__logo,
     &__navigation {
@@ -65,19 +59,17 @@ $width: 240px;
 }
 </style>
 
-<div class="sidebar-container">
-    <div class="sidebar">
-        <a href="/" class="sidebar__logo">
-            <Logo />
-        </a>
-        <nav class="sidebar__navigation">
-            <ul class="navigation">
-                {#each links as {link, label}, index }
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#{link}">{label}</a>
-                    </li>
-                {/each}
-            </ul>
-        </nav>
-    </div>
+<div class="sidebar">
+    <a href="/" class="sidebar__logo">
+        <Logo />
+    </a>
+    <nav class="sidebar__navigation">
+        <ul class="navigation">
+            {#each links as {link, label}, index }
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#{link}">{label}</a>
+                </li>
+            {/each}
+        </ul>
+    </nav>
 </div>

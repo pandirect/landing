@@ -1,5 +1,6 @@
 <script>
     import {services} from '../../models';
+    import {Button} from '../../components';
 
     let selectedService = services[0];
 
@@ -11,7 +12,7 @@
 <section class="services">
     <div class="service-groups">
         {#each services as service, index}
-            <button on:click={() => selectService(index)}>{service.group}</button>
+            <Button on:click={() => selectService(index)}>{service.group}</Button>
         {/each}
     </div>
     <div class="services-container">
