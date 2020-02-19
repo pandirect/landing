@@ -1,3 +1,0 @@
-<header>
-    <slot/>
-</header>
