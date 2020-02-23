@@ -22,13 +22,17 @@
     background: none;
     outline: none;
 
-    &_outlined {
+    &_outlined,
+    &_contained {
         border: 2px solid var(--blue);
         color: var(--blue);
     }
 
+    &_outlined {
+        background: var(--white);
+    }
+
     &_contained {
-        border: 2px solid var(--blue);
         background: var(--blue);
         color: var(--white);
     }
