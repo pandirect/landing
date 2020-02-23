@@ -1,11 +1,24 @@
 <script>
+    import { fade } from "svelte/transition"
+    import { create_in_transition } from "svelte/internal"
     import {services} from '../../models';
     import {Button} from '../../components';
 
     let selectedService = services[0];
 
+    let element;
+    let intro;
+
+    function animate() {
+        if (!intro) {
+            intro = create_in_transition(element, fade, {duration: 300});
+        }
+        intro.start();
+    }
+
     function selectService(index) {
         selectedService = services[index];
+        animate();
     }
 </script>
 
@@ -72,7 +85,7 @@
         {/each}
     </div>
     <div class="services-container">
-        <div class="service">
+        <div class="service" bind:this={element}>
             <img
                 class="service__image"
                 alt="{selectedService.group}"
