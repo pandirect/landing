@@ -1,13 +1,10 @@
 <script>
+    import {Title, Articles, Services, Contacts, About} from './landing';
     import Sidebar from "../layouts/Sidebar.svelte";
     import Main from "../layouts/_main.svelte";
     import Footer from "../layouts/_footer.svelte";
 
     import { links } from '../models';
-    import MainSection from "./landing/MainSection.svelte";
-    import Services from "./landing/Services.svelte";
-    import Articles from "./landing/Articles.svelte";
-    import AboutSection from "./landing/AboutSection.svelte";
 </script>
 
 <style type="text/scss" lang="scss">
@@ -28,10 +25,11 @@
     <Sidebar links="{links}"/>
     <div class="content">
         <Main>
-            <MainSection/>
+            <Title/>
             <Services/>
             <Articles/>
-            <AboutSection/>
+            <About/>
+            <Contacts/>
         </Main>
         <Footer links="{links}"/>
     </div>

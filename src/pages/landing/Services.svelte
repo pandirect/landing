@@ -23,10 +23,6 @@
 </script>
 
 <style lang="scss">
-.services {
-    margin: 60px auto;
-}
-
 .service-groups {
     display: flex;
     justify-content: center;
@@ -73,7 +69,7 @@
 }
 </style>
 
-<section class="services">
+<div class="services section">
     <div class="service-groups">
         {#each services as service, index}
             <div class="service-groups__name">
@@ -103,4 +99,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

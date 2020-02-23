@@ -17,8 +17,6 @@
 
 <style lang="scss">
 .articles {
-    margin-bottom: 60px;
-
     &__title {
         font-size: 34px;
         color: var(--black);
@@ -91,7 +89,7 @@
 }
 </style>
 
-<section class="articles">
+<div class="articles section">
     <h3 class="articles__title">Наши статьи</h3>
     <div class="articles__items">
         {#each articles as article, index (index)}
@@ -106,4 +104,4 @@
             </div>
         {/each}
     </div>
-</section>
+</div>

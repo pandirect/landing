@@ -7,6 +7,8 @@
 @import 'utils';
 
 // include global styles
+@import 'form';
+
 body {
     line-height: 1.5;
     position: relative;
@@ -24,4 +26,8 @@ nav {
     a {
         padding: .5rem 1rem;
     }
+}
+
+.section {
+    margin-bottom: 60px;
 }

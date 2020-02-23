@@ -6,6 +6,7 @@
     export let options = {};
     export let variant = 'text';
     export let disabled = false;
+    export let type = void 0;
 
     $: outlined = variant === 'outlined';
     $: contained = variant === 'contained';
@@ -45,6 +46,7 @@
     class:button_outlined={outlined}
     class:button_disabled={disabled}
     on:click={() => dispatch('click')}
+    type={type}
 >
     <slot>{text}</slot>
 </button>

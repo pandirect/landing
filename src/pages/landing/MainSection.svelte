@@ -44,7 +44,7 @@
 }
 </style>
 
-<section class="main">
+<div class="main section">
     <div class="main__content">
         <div class="main__text">
             <p class="main__title">Digital-агентство «Pandirect»</p>
@@ -59,4 +59,4 @@
             <img src={illustratePath} class="illustrate" alt="" title="" style="height: inherit"/>
         </div>
     </div>
-</section>
+</div>
