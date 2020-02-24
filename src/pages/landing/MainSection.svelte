@@ -13,7 +13,7 @@
     }
 
     &__text {
-        margin: auto auto auto 6% ;
+        margin: auto auto auto 6%;
         max-width: 600px;
         color: var(--white);
         z-index: 2;
@@ -21,7 +21,7 @@
 
     &__image {
         position: absolute;
-        left: 52%;
+        left: 50%;
         top: 0;
         bottom: 0;
         margin: auto;

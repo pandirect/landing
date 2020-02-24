@@ -37,7 +37,7 @@
     display: flex;
 
     &__image {
-        margin: 0 70px 0 70px;
+        margin: 0 70px;
         width: 600px;
     }
 
