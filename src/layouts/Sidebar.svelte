@@ -67,7 +67,7 @@ $width: 240px;
         <ul class="navigation">
             {#each links as {link, label}, index }
                 <li class="navigation__item">
-                    <a class="navigation__link" href="#{link}">{label}</a>
+                    <a class="navigation__link" href="{link}">{label}</a>
                 </li>
             {/each}
         </ul>

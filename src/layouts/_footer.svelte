@@ -38,7 +38,6 @@
         font-size: 18px;
         line-height: 24px;
         margin: 30px auto 0;
-        width: 300px;
 
         > img {
             height: 20px;
@@ -52,17 +51,19 @@
 
 <footer class="footer">
     <div class="footer__logo">
-        <Logo/>
+        <a href="/">
+            <Logo/>
+        </a>
     </div>
     <div class="footer__description">
         Digital-агентство с большим опытом работы на российском рынке по разработке web-приложений любой сложности
     </div>
     <div class="footer__links">
         {#each links as {link, label}, index }
-            <a href="#{link}" class="footer__link">{label}</a>
+            <a href="{link}" class="footer__link">{label}</a>
         {/each}
     </div>
     <div class="footer__copyright">
-        © 2019 Pandirect. Делаем сайты с <img src="./assets/heart.png" alt="Любовью" title="" />
+        © 2019 - {new Date().getFullYear()} Pandirect. Делаем сайты с <img src="./assets/heart.png" alt="Любовью" title="" />
     </div>
 </footer>
