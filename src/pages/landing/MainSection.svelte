@@ -1,5 +1,5 @@
 <script>
-    const illustratePath = '../assets/illustrate.svg';
+    const illustratePath = './assets/illustrate.svg';
 </script>
 
 <style lang="scss">
@@ -10,6 +10,7 @@
         width: 100%;
         height: 900px;
         background: url('../assets/background.svg') no-repeat;
+        background-size: cover;
     }
 
     &__text {
@@ -25,11 +26,16 @@
         top: 0;
         bottom: 0;
         margin: auto;
+        width: 100%;
+        max-width: 700px;
         height: 600px;
         background: url('../assets/main/lines.svg') no-repeat;
+        background-size: 97%;
 
         .illustrate {
-            height: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
         }
     }
 

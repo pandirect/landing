@@ -10,8 +10,10 @@ $width: 240px;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: $width;
-    min-width: $width;
+    width: 100%;
+    max-width: $width;
+    box-shadow: 0 0 32px 16px rgba(0, 0, 0, .05);
+    z-index: 2;
 
     &__logo {
         display: flex;
