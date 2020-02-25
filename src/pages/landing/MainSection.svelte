@@ -2,7 +2,7 @@
     const illustratePath = '../assets/illustrate.svg';
 </script>
 
-<style type="text/scss" lang="scss">
+<style lang="scss">
 .main {
     &__content {
         position: relative;
@@ -27,6 +27,10 @@
         margin: auto;
         height: 600px;
         background: url('../assets/main/lines.svg') no-repeat;
+
+        .illustrate {
+            height: inherit;
+        }
     }
 
     &__description {
@@ -56,7 +60,7 @@
             <!--<a class="nav-link button button-blue" href="#about">Создать сайт</a>-->
         </div>
         <div class="main__image">
-            <img src={illustratePath} class="illustrate" alt="" title="" style="height: inherit"/>
+            <img src={illustratePath} class="illustrate" alt="" title=""/>
         </div>
     </div>
 </div>

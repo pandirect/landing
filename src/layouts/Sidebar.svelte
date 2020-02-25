@@ -8,23 +8,19 @@ $width: 240px;
 
 .sidebar {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: $width;
     min-width: $width;
-    flex-direction: column;
-
-    &__logo,
-    &__navigation {
-        margin: 50px auto;
-        display: flex;
-    }
 
     &__logo {
-        margin-bottom: 0;
+        display: flex;
+        margin: 50px auto 0;
         justify-content: center;
     }
 
     &__navigation {
+        display: flex;
         margin: auto;
         width: 100%;
     }
@@ -67,7 +63,7 @@ $width: 240px;
         <ul class="navigation">
             {#each links as {link, label}, index }
                 <li class="navigation__item">
-                    <a class="navigation__link" href="{link}">{label}</a>
+                    <a class="navigation__link" href="#{link}">{label}</a>
                 </li>
             {/each}
         </ul>

@@ -1,5 +1,5 @@
 <script>
-    import {Button} from "../../components/button";
+    import {Button} from '../../components/button';
     let name = '';
     let phone = '';
     let message = '';

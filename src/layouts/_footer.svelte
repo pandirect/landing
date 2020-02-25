@@ -1,5 +1,5 @@
 <script>
-    import {Logo} from "../components";
+    import {Logo} from '../components';
 
     export let links;
 </script>

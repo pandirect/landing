@@ -1,13 +1,13 @@
 <script>
     import {Title, Articles, Services, Contacts, About} from './landing';
-    import Sidebar from "../layouts/Sidebar.svelte";
-    import Main from "../layouts/_main.svelte";
-    import Footer from "../layouts/_footer.svelte";
+    import Sidebar from '../layouts/Sidebar.svelte';
+    import Main from '../layouts/_main.svelte';
+    import Footer from '../layouts/_footer.svelte';
 
     import { links } from '../models';
 </script>
 
-<style type="text/scss" lang="scss">
+<style lang="scss">
 .layout {
     display: flex;
     width: 100vw;

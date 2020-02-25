@@ -1,6 +1,6 @@
 <script>
-    import { fade } from "svelte/transition"
-    import { create_in_transition } from "svelte/internal"
+    import { fade } from 'svelte/transition';
+    import { create_in_transition } from 'svelte/internal';
     import {services} from '../../models';
     import {Button} from '../../components';
 
