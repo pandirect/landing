@@ -1,8 +1,8 @@
 <script>
     import { fade } from 'svelte/transition';
     import { create_in_transition } from 'svelte/internal';
-    import {services} from '../../models';
-    import {Button} from '../../components';
+    import { services } from '../../models';
+    import { Button } from '../../components';
 
     let selectedService = services[0];
 
@@ -23,50 +23,54 @@
 </script>
 
 <style lang="scss">
-.service-groups {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
+    .service-groups {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
 
-    &__name {
-        margin: 0 5px;
-    }
-}
-
-.service {
-    display: flex;
-
-    &__image {
-        margin: 0 70px;
-        width: 600px;
+        &__name {
+            margin: 0 5px;
+        }
     }
 
-    &__info {
-        padding-right: 60px;
-    }
+    .service {
+        display: flex;
 
-    &__title {
-        font-size: 36px;
-        color: var(--black);
-        line-height: 42px;
-        margin-bottom: 30px;
-    }
+        &__image {
+            margin: 0 70px;
+            width: 600px;
+        }
 
-    &__description {
-        font-size: 18px;
-        color: var(--bright-grey);
-        line-height: 27px;
-        margin-bottom: 30px;
-    }
+        &__info {
+            padding-right: 60px;
+        }
 
-    &__items {
-        list-style-type: circle;
-        margin-left: 30px;
-        font-size: 21px;
-        color: var(--black);
-        line-height: 21px;
+        &__title {
+            font-size: 36px;
+            color: var(--black);
+            line-height: 42px;
+            margin-bottom: 30px;
+        }
+
+        &__description {
+            font-size: 18px;
+            color: var(--bright-grey);
+            line-height: 27px;
+            margin-bottom: 30px;
+        }
+
+        &__items {
+            list-style-type: circle;
+            margin-left: 30px;
+            font-size: 21px;
+            color: var(--black);
+            line-height: 21px;
+
+            > li {
+                margin: 0 0 20px
+            }
+        }
     }
-}
 </style>
 
 <div class="services section">
@@ -93,7 +97,7 @@
                 <p class="service__description">{selectedService.description}</p>
                 <ul class="service__items">
                     {#each selectedService.items as item}
-                        <li style="margin: 0 0 20px">{item}</li>
+                        <li>{item}</li>
                     {/each}
                 </ul>
             </div>

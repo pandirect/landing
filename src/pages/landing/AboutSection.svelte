@@ -43,10 +43,10 @@
 <div class="about section">
     <div class="about-info">
         <div class="about-info__title">Узнайте о нас больше</div>
-        <div class="about-info__description">
+        <p class="about-info__description">
             Не можете сформулировать проблему, которая стоит перед Вашим бизнесом? Мы готовы в этом помочь,
             оказав бесплатную консультацию и предложив подходящие решения
-        </div>
+        </p>
     </div>
     <div class="about-form form">
         <form>
