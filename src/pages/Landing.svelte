@@ -1,26 +1,36 @@
 <script>
-    import Sidebar from "../layouts/Sidebar.svelte";
-    import Main from "../layouts/_main.svelte";
-    import Footer from "../layouts/_footer.svelte";
+    import {Title, Articles, Services, Contacts, About} from './landing';
+    import Sidebar from '../layouts/Sidebar.svelte';
+    import Main from '../layouts/_main.svelte';
+    import Footer from '../layouts/_footer.svelte';
 
-    import { links } from '../models';;
-    import MainSection from "./landing/MainSection.svelte";
-    import Services from "./landing/Services.svelte";
-    import Articles from "./landing/Articles.svelte";
-    import AboutSection from "./landing/AboutSection.svelte";
+    import { links } from '../models';
 </script>
 
-<style type="text/scss" lang="scss">
+<style lang="scss">
+.layout {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
 
+.content {
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+}
 </style>
 
-<div>
+<div class="layout">
     <Sidebar links="{links}"/>
-    <Main>
-        <MainSection/>
-        <Services/>
-        <Articles/>
-        <AboutSection/>
-    </Main>
-    <Footer links="{links}"/>
+    <div class="content">
+        <Main>
+            <Title/>
+            <Services/>
+            <Articles/>
+            <About/>
+            <Contacts/>
+        </Main>
+        <Footer links="{links}"/>
+    </div>
 </div>
