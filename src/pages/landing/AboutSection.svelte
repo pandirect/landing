@@ -11,6 +11,7 @@
     padding-top: 80px;
     background-image: url(./assets/about/map.svg);
     background-repeat: no-repeat;
+    max-width: 1210px;
 }
 
 .about-info {

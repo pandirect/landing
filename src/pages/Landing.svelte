@@ -10,14 +10,17 @@
 <style lang="scss">
 .layout {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    max-width: 2560px;
+    margin: 0 auto;
 }
 
 .content {
     width: 100%;
-    max-width: 1920px;
-    overflow-x: hidden;
+    height: 100vh;
+    max-width: calc(100% - 240px);
+    overflow-y: auto;
 }
 </style>
 

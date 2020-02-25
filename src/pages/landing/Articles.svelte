@@ -17,6 +17,8 @@
 
 <style lang="scss">
 .articles {
+    max-width: 1210px;
+
     &__title {
         font-size: 34px;
         color: var(--black);
