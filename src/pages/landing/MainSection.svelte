@@ -4,6 +4,9 @@
 
 <style lang="scss">
 .main {
+    width: 100%;
+    overflow-x: hidden;
+
     &__content {
         position: relative;
         display: flex;

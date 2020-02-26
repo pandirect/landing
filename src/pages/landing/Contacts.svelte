@@ -20,6 +20,7 @@
     &__items {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         margin: 150px auto 0;
     }
 
@@ -33,6 +34,18 @@
 
         > a {
             color: var(--bright-grey);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        &__items {
+            justify-content: left;
+        }
+
+        &__item {
+            margin: 10px 30px;
         }
     }
 }

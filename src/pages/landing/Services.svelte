@@ -1,8 +1,8 @@
 <script>
-    import { fade } from 'svelte/transition';
-    import { create_in_transition } from 'svelte/internal';
-    import { services } from '../../models';
-    import { Button } from '../../components';
+    import {fade} from 'svelte/transition';
+    import {create_in_transition} from 'svelte/internal';
+    import {services} from '../../models';
+    import {Button} from '../../components';
 
     let selectedService = services[0];
 
@@ -75,6 +75,38 @@
             }
         }
     }
+
+    @media (max-width: 1600px) {
+        .service {
+            &__image {
+                margin: 0 30px;
+                width: 40%;
+            }
+        }
+    }
+
+    @media (max-width: 1100px) {
+        .service {
+            &__image {
+                display: none;
+            }
+
+            &__info {
+                padding: 0;
+                margin: 30px;
+            }
+
+            &-groups {
+                margin-bottom: 20px;
+                display: flex;
+                flex-wrap: wrap;
+
+                &__name {
+                    margin: 10px 5px;
+                }
+            }
+        }
+    }
 </style>
 
 <div class="services section">
@@ -82,8 +114,8 @@
         {#each services as service, index}
             <div class="service-groups__name">
                 <Button
-                    on:click={() => selectService(index)}
-                    variant={selectedService === service ? 'contained' : ''}
+                        on:click={() => selectService(index)}
+                        variant={selectedService === service ? 'contained' : ''}
                 >{service.group}</Button>
             </div>
         {/each}
@@ -91,10 +123,10 @@
     <div class="services-container">
         <div class="service" bind:this={element}>
             <img
-                class="service__image"
-                alt="{selectedService.group}"
-                title="{selectedService.group}"
-                src="../assets/services/{selectedService.image}"
+                    class="service__image"
+                    alt="{selectedService.group}"
+                    title="{selectedService.group}"
+                    src="../assets/services/{selectedService.image}"
             />
             <div class="service__info">
                 <p class="service__title">{selectedService.title}</p>

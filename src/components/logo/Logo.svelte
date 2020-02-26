@@ -3,10 +3,17 @@
 </script>
 
 <style lang="scss">
-.logo {
-    display: flex;
-    margin: 1em;
-}
+    .logo {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            display: none;
+        }
+    }
 </style>
 
-<IconWithText/>
+<div class="logo">
+    <IconWithText/>
+</div>

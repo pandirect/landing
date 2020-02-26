@@ -8,20 +8,29 @@
 </script>
 
 <style lang="scss">
-.layout {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    max-width: 2560px;
-    margin: 0 auto;
-}
+    .layout {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        max-width: 2560px;
+        margin: 0 auto;
+    }
 
-.content {
-    width: 100%;
-    height: 100vh;
-    max-width: calc(100% - 240px);
-    overflow-y: auto;
-}
+    .content {
+        width: 100%;
+        height: 100vh;
+        max-width: calc(100% - 240px);
+        overflow-y: auto;
+    }
+    @media (max-width: 768px) {
+        .layout {
+            flex-wrap: wrap;
+        }
+
+        .content {
+            max-width: 100%;
+        }
+    }
 </style>
 
 <div class="layout">
