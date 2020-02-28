@@ -3,13 +3,17 @@
     import Contacts from "../pages/landing/Contacts.svelte";
 
     export let links;
+    export let isInvert;
+
     let isOpen = false;
-    let colorType = "white";
+    let invertColor = "white";
+    $: invertColor = isInvert ? "purple" : "white";
 
     function handleMobileMenu() {
         isOpen = !isOpen;
-        colorType = isOpen ? "purple" : "white";
+        invertColor = isOpen || isInvert ? "purple" : "white";
     }
+
 </script>
 
 <style lang="scss">
@@ -50,8 +54,9 @@
         }
 
         &__link {
+            font-family: "Roboto-Regular", sans-serif;
             color: var(--grey);
-            border-left: 6px solid var(--white);
+            border-left: 6px solid var(--invisible);
             display: block;
             padding-left: 50px;
             margin: 8px 0;
@@ -61,6 +66,7 @@
             &:focus {
                 border-left-color: var(--blue);
                 color: var(--blue);
+                font-family: "Roboto-Medium", sans-serif;
             }
 
             &:hover {
@@ -69,13 +75,18 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         .sidebar {
             max-width: 100%;
             height: auto;
             position: absolute;
             box-shadow: none;
             transition: .25s;
+
+            &[data-invert=true] {
+                background-color: #ffffff;
+                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+            }
 
             &__logo {
                 display: none;
@@ -110,19 +121,19 @@
     }
 </style>
 
-<div class="sidebar" data-open="{isOpen}">
+<div class="sidebar" data-open="{isOpen}" data-invert={isInvert}>
     <a href="/" class="sidebar__logo">
         <Logo/>
     </a>
     <div class="sidebar-mobile">
         <a href="/">
-            <LogoMobile colorType="{colorType}"/>
+            <LogoMobile colorType="{invertColor}"/>
         </a>
         <div class="sidebar__hamburger" on:click={handleMobileMenu}>
-            <HamburgerMenu colorType="{colorType}" isOpen="{isOpen}"/>
+            <HamburgerMenu colorType="{invertColor}" isOpen="{isOpen}"/>
         </div>
     </div>
-    <nav class="sidebar__navigation" on:click={handleMobileMenu}>
+    <nav class="sidebar__navigation" on:click={isOpen ? handleMobileMenu : void 0}>
         <ul class="navigation">
             {#each links as {link, label}, index }
                 <li class="navigation__item">
@@ -132,6 +143,6 @@
         </ul>
     </nav>
     <div class="sidebar__contact">
-        <Contacts />
+        <Contacts/>
     </div>
 </div>

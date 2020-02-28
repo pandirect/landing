@@ -33,6 +33,9 @@
         margin-bottom: 60px;
 
         &__name {
+            font-family: "SFDisplay-Medium", sans-serif;
+            font-size: 18px;
+            line-height: 21px;
             margin: 0 5px;
         }
     }
@@ -50,6 +53,7 @@
         }
 
         &__title {
+            font-family: "SFDisplay-Light", sans-serif;
             font-size: 36px;
             color: var(--black);
             line-height: 42px;
@@ -57,6 +61,7 @@
         }
 
         &__description {
+            font-family: "SFDisplay-Light", sans-serif;
             font-size: 18px;
             color: var(--bright-grey);
             line-height: 27px;
@@ -64,11 +69,12 @@
         }
 
         &__items {
+            font-family: "SFDisplay-Light", sans-serif;
+            font-size: 21px;
+            line-height: 21px;
+            color: var(--black);
             list-style-type: circle;
             margin-left: 30px;
-            font-size: 21px;
-            color: var(--black);
-            line-height: 21px;
 
             > li {
                 margin: 0 0 20px
@@ -93,7 +99,6 @@
 
             &__info {
                 padding: 0;
-                margin: 30px;
             }
 
             &-groups {

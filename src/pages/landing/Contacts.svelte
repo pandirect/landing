@@ -25,6 +25,7 @@
     }
 
     &__item {
+        font-family: "SFDisplay-Light", sans-serif;
         font-size: 18px;
         line-height: 21px;
         margin: 0 30px;
@@ -38,7 +39,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contacts {
         &__items {
             justify-content: left;

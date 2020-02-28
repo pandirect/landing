@@ -5,6 +5,17 @@
     import Footer from '../layouts/_footer.svelte';
 
     import { links } from '../models';
+    import { onMount } from 'svelte';
+
+    let contentElement = null;
+    let invert = false;
+
+    onMount(() => {
+        contentElement.addEventListener('scroll', function() {
+            let heightOfMainBlock = document.getElementsByClassName("main")[0].clientHeight;
+            invert = contentElement.scrollTop + 96 > heightOfMainBlock;
+        });
+    })
 </script>
 
 <style lang="scss">
@@ -22,7 +33,7 @@
         max-width: calc(100% - 240px);
         overflow-y: auto;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         .layout {
             flex-wrap: wrap;
         }
@@ -34,8 +45,8 @@
 </style>
 
 <div class="layout">
-    <Sidebar links="{links}"/>
-    <div class="content">
+    <Sidebar links="{links}" isInvert={invert}/>
+    <div class="content" bind:this={contentElement}>
         <Main>
             <Title/>
             <Services/>
