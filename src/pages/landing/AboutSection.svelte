@@ -1,5 +1,7 @@
 <script>
   import {Button} from '../../components/button';
+  import IMask from 'imask';
+  import {onMount} from 'svelte';
 
   const values = {};
   const emails = [
@@ -10,6 +12,13 @@
   let body = '';
   $: body = `Телефон: ${values.phone}.
   Сообщение: ${values.message}`;
+
+  let phoneElement;
+  let nameElement;
+  onMount(() => {
+    IMask(phoneElement, {mask: '+{7} (000) 000-00-00'});
+    IMask(nameElement, {mask: /^[a-zA-Zа-яёА-ЯЁ]+$/ui});
+  });
 </script>
 
 <style lang="scss">
@@ -57,19 +66,41 @@
     </p>
   </div>
   <div class="about-form form">
-    <form action={`mailto:${emails.join(';')}?subject=Pandirect - ${values.name}&body=${body}`} method="post" enctype="text/plain">
+    <form
+      method="post"
+      enctype="text/plain"
+      action={`mailto:${emails.join(';')}?subject=Pandirect - ${values.name}&body=${body}`}
+    >
       <div class="form__line">
         <div class="form__field">
           <label class="form__label">Как к Вам обращаться?</label>
-          <input type="text" bind:value={values.name} class="form__input" placeholder="Ваше имя"/>
+          <input
+            type="text"
+            required
+            class="form__input"
+            placeholder="Ваше имя"
+            bind:value={values.name}
+            bind:this={nameElement}
+          />
         </div>
         <div class="form__field">
           <label class="form__label">Телефон</label>
-          <input type="text" bind:value={values.phone} class="form__input" placeholder="+7 (XXX) XXX-XX-XX"/>
+          <input
+            type="tel"
+            required
+            class="form__input"
+            placeholder="+7 (XXX) XXX-XX-XX"
+            bind:this={phoneElement}
+            bind:value={values.phone}/>
         </div>
       </div>
       <div class="form__line">
-        <textarea class="form__textarea" bind:value={values.message} placeholder="Введите Ваше сообщение…"></textarea>
+        <textarea
+          class="form__textarea"
+          required
+          placeholder="Введите Ваше сообщение…"
+          bind:value={values.message}
+        ></textarea>
       </div>
       <div class="about-form__submit">
         <Button variant="outlined" type="submit">Отправить</Button>
