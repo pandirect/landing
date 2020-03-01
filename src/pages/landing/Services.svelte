@@ -94,7 +94,7 @@
                 class="service__image"
                 alt="{selectedService.group}"
                 title="{selectedService.group}"
-                src="../assets/services/{selectedService.image}"
+                src="./assets/services/{selectedService.image}"
             />
             <div class="service__info">
                 <p class="service__title">{selectedService.title}</p>

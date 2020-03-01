@@ -9,7 +9,7 @@
         display: flex;
         width: 100%;
         height: 900px;
-        background: url('../assets/background.svg') no-repeat;
+        background: url('./assets/background.svg') no-repeat;
         background-size: cover;
     }
 
@@ -29,7 +29,7 @@
         width: 100%;
         max-width: 700px;
         height: 600px;
-        background: url('../assets/main/lines.svg') no-repeat;
+        background: url('./assets/main/lines.svg') no-repeat;
         background-size: 97%;
 
         .illustrate {
