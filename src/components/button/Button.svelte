@@ -3,7 +3,7 @@
 
     const dispatch = createEventDispatcher();
 
-    export let options = {};
+    export const options = {};
     export let variant = 'text';
     export let disabled = false;
     export let type = void 0;
