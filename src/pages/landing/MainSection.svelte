@@ -3,55 +3,75 @@
 </script>
 
 <style lang="scss">
-.main {
-    &__content {
-        position: relative;
-        display: flex;
+    .main {
         width: 100%;
-        height: 900px;
-        background: url('./assets/background.svg') no-repeat;
-        background-size: cover;
-    }
-
-    &__text {
-        margin: auto auto auto 6%;
-        max-width: 600px;
-        color: var(--white);
-        z-index: 2;
-    }
-
-    &__image {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 100%;
-        max-width: 700px;
-        height: 600px;
-        background: url('./assets/main/lines.svg') no-repeat;
-        background-size: 97%;
+        overflow-x: hidden;
 
         .illustrate {
             display: block;
             width: 100%;
             height: 100%;
         }
-    }
 
-    &__description {
-        &_big {
-            font-size: 40px;
-            line-height: 50px;
-            margin: 10px 0 15px;
+        &__content {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 900px;
+            background: url('./assets/background.svg') no-repeat;
+            background-size: cover;
         }
 
-        &_small {
-            font-size: 15px;
+        &__title {
+            font-family: "SFDisplay-Light", sans-serif;
+            font-size: 16px;
             line-height: 24px;
         }
+
+        &__text {
+            margin: auto auto auto 6%;
+            max-width: 600px;
+            color: var(--white);
+            z-index: 2;
+        }
+
+        &__image {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            max-width: 700px;
+            height: 600px;
+            background: url('./assets/main/lines.svg') no-repeat;
+            background-size: 97%;
+        }
+
+        &__description {
+            &_big {
+                font-family: "SFDisplay-Semibold", sans-serif;
+                font-size: 40px;
+                line-height: 50px;
+                margin: 10px 0 15px;
+            }
+
+            &_small {
+                font-family: "SFDisplay-Light", sans-serif;
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
     }
-}
+
+    @media (max-width: 1550px) {
+        .main {
+            .illustrate {
+                transition: .25s;
+                opacity: 0.75;
+            }
+        }
+    }
 </style>
 
 <div class="main section">

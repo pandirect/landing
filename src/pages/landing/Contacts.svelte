@@ -20,10 +20,12 @@
     &__items {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         margin: 150px auto 0;
     }
 
     &__item {
+        font-family: "SFDisplay-Light", sans-serif;
         font-size: 18px;
         line-height: 21px;
         margin: 0 30px;
@@ -33,6 +35,18 @@
 
         > a {
             color: var(--bright-grey);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .contacts {
+        &__items {
+            justify-content: left;
+        }
+
+        &__item {
+            margin: 10px 30px;
         }
     }
 }
