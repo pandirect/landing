@@ -7,6 +7,12 @@
         width: 100%;
         overflow-x: hidden;
 
+        .illustrate {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
         &__content {
             position: relative;
             display: flex;
@@ -40,12 +46,6 @@
             height: 600px;
             background: url('../assets/main/lines.svg') no-repeat;
             background-size: 97%;
-
-            .illustrate {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
         }
 
         &__description {
@@ -66,11 +66,9 @@
 
     @media (max-width: 1550px) {
         .main {
-            &__image {
-                .illustrate {
-                    transition: .25s;
-                    opacity: 0.75;
-                }
+            .illustrate {
+                transition: .25s;
+                opacity: 0.75;
             }
         }
     }

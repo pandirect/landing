@@ -6,7 +6,7 @@
     export let isInvert;
 
     let isOpen = false;
-    let invertColor = "white";
+    let invertColor;
     $: invertColor = isInvert ? "purple" : "white";
 
     function handleMobileMenu() {

@@ -10,10 +10,12 @@
     let contentElement = null;
     let invert = false;
 
+    const mobileSidebarHeight = 96;
+
     onMount(() => {
         contentElement.addEventListener('scroll', function() {
             let heightOfMainBlock = document.getElementsByClassName("main")[0].clientHeight;
-            invert = contentElement.scrollTop + 96 > heightOfMainBlock;
+            invert = contentElement.scrollTop + mobileSidebarHeight > heightOfMainBlock;
         });
     })
 </script>

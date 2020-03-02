@@ -78,7 +78,7 @@
 
     @media (max-width: 1410px) {
         .about {
-            > div {
+            .about-info, .about-form {
                 width: 100%;
                 max-width: 640px;
                 padding: 0;
