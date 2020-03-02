@@ -42,3 +42,13 @@ nav {
     background-color: darkgrey;
     border-radius: 5px;
 }
+
+@media (max-width: 1550px) {
+    .section {
+        margin: 0 30px 100px;
+
+        &:first-child {
+            margin: 0 auto 100px;
+        }
+    }
+}
