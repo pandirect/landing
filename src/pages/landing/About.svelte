@@ -109,7 +109,7 @@
     }
 </style>
 
-<div class="about section">
+<div class="about">
   <div class="about-info">
     <div class="about-info__title">Узнайте о нас больше</div>
     <p class="about-info__description">

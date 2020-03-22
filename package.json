@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "query-string": "^6.11.1",
     "sirv-cli": "^0.4.4"
   },
   "devDependencies": {
@@ -17,7 +18,7 @@
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.2.0",
-    "svelte": "^3.18.1",
+    "svelte": "^3.20.1",
     "svelte-preprocess-sass": "^0.2.0"
   },
   "scripts": {

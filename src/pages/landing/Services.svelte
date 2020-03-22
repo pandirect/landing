@@ -114,34 +114,32 @@
     }
 </style>
 
-<div class="services section">
-    <div class="service-groups">
-        {#each services as service, index}
-            <div class="service-groups__name">
-                <Button
-                        on:click={() => selectService(index)}
-                        variant={selectedService === service ? 'contained' : ''}
-                >{service.group}</Button>
-            </div>
-        {/each}
-    </div>
-    <div class="services-container">
-        <div class="service" bind:this={element}>
-            <img
-                    class="service__image"
-                    alt="{selectedService.group}"
-                    title="{selectedService.group}"
-                    src="./assets/services/{selectedService.image}"
-            />
-            <div class="service__info">
-                <p class="service__title">{selectedService.title}</p>
-                <p class="service__description">{selectedService.description}</p>
-                <ul class="service__items">
-                    {#each selectedService.items as item}
-                        <li>{item}</li>
-                    {/each}
-                </ul>
-            </div>
+<div class="service-groups">
+    {#each services as service, index}
+        <div class="service-groups__name">
+            <Button
+                    on:click={() => selectService(index)}
+                    variant={selectedService === service ? 'contained' : ''}
+            >{service.group}</Button>
+        </div>
+    {/each}
+</div>
+<div class="services-container">
+    <div class="service" bind:this={element}>
+        <img
+            class="service__image"
+            alt="{selectedService.group}"
+            title="{selectedService.group}"
+            src="./assets/services/{selectedService.image}"
+        />
+        <div class="service__info">
+            <p class="service__title">{selectedService.title}</p>
+            <p class="service__description">{selectedService.description}</p>
+            <ul class="service__items">
+                {#each selectedService.items as item}
+                    <li>{item}</li>
+                {/each}
+            </ul>
         </div>
     </div>
 </div>

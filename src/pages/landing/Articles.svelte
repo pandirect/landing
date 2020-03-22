@@ -109,7 +109,7 @@
     }
 </style>
 
-<div class="articles section">
+<div class="articles">
     <h3 class="articles__title">Наши статьи</h3>
     <div class="articles__items">
         {#each articles as article, index (index)}

@@ -70,7 +70,7 @@
     </div>
     <div class="footer__links">
         {#each links as {link, label}, index }
-            <a href="{link}" class="footer__link">{label}</a>
+            <a href={link} class="footer__link">{label}</a>
         {/each}
     </div>
     <div class="footer__copyright">
