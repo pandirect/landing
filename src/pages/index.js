@@ -1,0 +1,1 @@
+import Main from './Landing.svelte';
