@@ -70,7 +70,7 @@
             <!--<Section id="blog">
                 <Articles/>
             </Section>-->
-            <Section id="about">
+            <Section id="about" style="max-width: 1200px">
                 <About/>
             </Section>
             <Section id="contacts">

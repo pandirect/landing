@@ -6,6 +6,11 @@
 <style lang="scss">
     .section {
         margin: 0 auto 100px;
+        max-width: 1400px;
+
+        &:first-child {
+            max-width: 100%;
+        }
     }
 
     @media (max-width: 1550px) {
