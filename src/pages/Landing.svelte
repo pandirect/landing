@@ -67,9 +67,9 @@
             <Section id="services">
                 <Services/>
             </Section>
-            <Section id="blog">
+            <!--<Section id="blog">
                 <Articles/>
-            </Section>
+            </Section>-->
             <Section id="about">
                 <About/>
             </Section>

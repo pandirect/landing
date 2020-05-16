@@ -66,7 +66,7 @@
         </a>
     </div>
     <div class="footer__description">
-        Digital-агентство с большим опытом работы на российском рынке по разработке web-приложений любой сложности
+        Digital-агентство по разработке web-приложений любой сложности
     </div>
     <div class="footer__links">
         {#each links as {link, label}, index }
