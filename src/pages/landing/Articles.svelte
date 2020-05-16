@@ -27,8 +27,6 @@
 
 <style lang="scss">
     .articles {
-        max-width: 1240px;
-
         &__title {
             font-family: "SFDisplay-Light", sans-serif;
             font-size: 34px;

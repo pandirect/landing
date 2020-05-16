@@ -23,10 +23,6 @@
 </script>
 
 <style lang="scss">
-    .services {
-        max-width: 1400px;
-    }
-
     .service-groups {
         display: flex;
         justify-content: center;
