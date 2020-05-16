@@ -2,6 +2,10 @@
     import {Logo, LogoMobile, HamburgerMenu} from '../components';
     import Contacts from "../pages/landing/Contacts.svelte";
 
+    import { getLocation } from '../helpers';
+
+    import {onMount} from 'svelte';
+
     export let links;
     export let isInvert;
 
@@ -13,6 +17,15 @@
         isOpen = !isOpen;
         invertColor = isOpen || isInvert ? "purple" : "white";
     }
+
+    let path = getLocation();
+
+    onMount(() => {
+        // TODO: temp solution, need listen location changed in global
+        window.addEventListener('popstate', (event) => {
+            $: path = getLocation();
+        });
+    });
 
 </script>
 
@@ -63,7 +76,8 @@
             font-size: 1em;
             transition: .25s;
 
-            &:focus {
+            &:focus,
+            &_active {
                 border-left-color: var(--blue);
                 color: var(--blue);
                 font-family: "Roboto-Medium", sans-serif;
@@ -137,7 +151,10 @@
         <ul class="navigation">
             {#each links as {link, label}, index }
                 <li class="navigation__item">
-                    <a class="navigation__link" href="#{link}">{label}</a>
+                    <a class="navigation__link"
+                       class:navigation__link_active="{path.fragment === link.substr(1)}"
+                       href={link}
+                    >{label}</a>
                 </li>
             {/each}
         </ul>

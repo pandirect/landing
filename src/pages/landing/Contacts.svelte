@@ -17,12 +17,10 @@
 }
 
 .contacts {
-    &__items {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 150px auto 0;
-    }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 150px auto 0;
 
     &__item {
         font-family: "SFDisplay-Light", sans-serif;
@@ -41,9 +39,7 @@
 
 @media (max-width: 900px) {
     .contacts {
-        &__items {
-            justify-content: left;
-        }
+        justify-content: left;
 
         &__item {
             margin: 10px 30px;
@@ -52,9 +48,7 @@
 }
 </style>
 
-<div class="contacts section">
-    <div class="contacts__items">
-        <div class="contacts__item" data-type="phone"><a href="tel:+79023582158">+7 (902) 358-21-58</a></div>
-        <div class="contacts__item" data-type="mail"><a href="mailto:info@pandirect.ru">info@pandirect.ru</a></div>
-    </div>
+<div class="contacts">
+    <div class="contacts__item" data-type="phone"><a href="tel:+79023582158">+7 (902) 358-21-58</a></div>
+    <div class="contacts__item" data-type="mail"><a href="mailto:info@pandirect.ru">info@pandirect.ru</a></div>
 </div>
