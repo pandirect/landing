@@ -31,7 +31,6 @@
         background-image: url(./assets/about/map.svg);
         background-repeat: no-repeat;
         max-width: 1100px;
-        width: calc(100% - 60px);
     }
 
     .about-info {
